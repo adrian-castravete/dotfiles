@@ -1,0 +1,6 @@
+[submodule "mydwm"]
+	path = mydwm
+	url = git@github.com:adrian-castravete/mydwm.git
+[submodule ".vim"]
+	path = .vim
+	url = git@github.com:adrian-castravete/vimrc.git

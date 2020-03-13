@@ -1,0 +1,4 @@
+#!/bin/bash
+
+export DFM_REPO=$HOME/.dotfiles
+source $HOME/.aliases
