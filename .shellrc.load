@@ -2,4 +2,7 @@
 
 export DFM_REPO=$HOME/.dotfiles
 source $HOME/.custom-ps1
-source $HOME/.aliases
+if [ -e $HOME/.aliases ]
+then
+	source $HOME/.aliases
+fi
