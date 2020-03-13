@@ -143,7 +143,7 @@ while getValues(LOCK_FILE) == semaphore do
       elseif s == 'Full' then
         bs = ''
       end
-      k = k.." "..string.format("%.1f%%(%d)", en/efd*100, en/ef*100)..bs
+      k = k.." "..string.format("%.1f%%(%d)", en/efd*100, math.floor(en/ef*100))..bs
     end
   end
   if #k > 0 then
