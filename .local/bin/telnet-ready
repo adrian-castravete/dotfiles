@@ -1,0 +1,5 @@
+#!/bin/bash
+
+FONT="xft:PxPlus IBM EGA8:pixelsize=32"
+
+urxvt -fn "$FONT" -fi "$FONT:italic" -fb "$FONT" -fbi "$FONT:italic" -fg grey -bg black -geometry 80x25 $@
