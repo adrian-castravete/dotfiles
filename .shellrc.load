@@ -1,4 +1,5 @@
 #!/bin/bash
 
 export DFM_REPO=$HOME/.dotfiles
+source $HOME/.custom-ps1
 source $HOME/.aliases
