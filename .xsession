@@ -16,5 +16,6 @@ dwmstatus.lua &
 xfce4-power-manager &
 pnmixer &
 sxhkd &
+dunst &
 
 exec dbus-launch --exit-with-session dwm >> $HOME/.dwm.out 2>> $HOME/.dwm.err
