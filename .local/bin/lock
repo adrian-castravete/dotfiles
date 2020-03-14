@@ -12,12 +12,11 @@ then
   notify-send "DUNST_COMMAND_PAUSE"
 fi
 
-if pidof xautolock
-then
-  xautolock -exit
-fi
 slock
-xautolock -time 5 -locker lock -notify 5 &
+if ! pidof xautolock
+then
+  xautolock -time 5 -locker lock -notify 5 &
+fi
 
 if [ $dunst_pid ]
 then
