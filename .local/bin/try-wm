@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if ! which Xephyr
+then
+  sudo apt install xserver-xephyr
+fi
+
+Xephyr :42 -ac -br -noreset -screen 1280x800 &
+XEPHYR_PID=$?
+sleep 1s
+export DISPLAY=:42.0
+cd ~
+$*
+export DISPLAY=
+kill -KILL $XEPHYR_PID
