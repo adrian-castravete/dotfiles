@@ -1,0 +1,37 @@
+#!/usr/bin/env lua
+
+local font = "xft:Perfect DOS VGA 437:pixelsize=32"
+local command = "TERM=ansi COLORTERM=ansi LC_ALL=en_US.ISO-8859-1 urxvt -fn '"..font.."' -fb '"..font.."' -fi '"..font.."' -fbi '"..font.."' -fg grey -bg black -geometry 80x25"
+local bbses = {
+  isca = "bbs.iscabbs.com",
+  mono = "mono.org",
+  stardoc = "bbs.stardoc134.com 2323",
+  vortex = "vortexbbs.com",
+}
+local args = {...}
+
+function printRegistered()
+  print("Registered BBSes are:")
+  for key, value in pairs(bbses) do
+    print("\t"..key.."\t   ->\t"..value)
+  end
+end
+
+function main()
+  local name = args[1]
+  if not name then
+    printRegistered()
+  else
+    for key, _ in pairs(bbses) do
+      if key == name then
+        local run = command.." -e telnet "..bbses[name]..""
+        os.execute(run)
+        return
+      end
+    end
+    print("Unregistered BBS '"..name.."'")
+    printRegistered()
+  end
+end
+
+main()
