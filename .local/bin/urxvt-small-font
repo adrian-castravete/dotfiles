@@ -1,0 +1,9 @@
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+
+print "\e]710;-*-courier-medium-r-*-*-12-*-*-*-m-*-*-*\e\\\n";
+print "\e]711;-*-courier-bold-r-*-*-12-*-*-*-m-*-*-*\e\\\n";
+print "\e]712;-*-courier-medium-o-*-*-12-*-*-*-m-*-*-*\e\\\n";
+print "\e]713;-*-courier-bold-o-*-*-12-*-*-*-m-*-*-*\e\\\n";
