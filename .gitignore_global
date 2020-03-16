@@ -1,0 +1,32 @@
+# Python related
+*.py[cow]
+*.scrap.py
+.pylintrc
+.flakerc
+.eggs/
+.flake8rc
+.pytest_cache
+
+# VIM related
+.vimrc
+*.sw[po]
+
+# (Exuberant) ctags output file
+tags
+
+# Other
+pspp.jnl
+.idea/
+.vscode/
+
+# Emacs related
+\#*#
+*~
+*.local.yaml
+*.local.json
+
+Dockerfile
+docker-compose.yml
+swoopBuf
+
+package-lock.json
