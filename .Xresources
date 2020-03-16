@@ -9,7 +9,7 @@ Xft.lcdfilter: lcddefault
 *foreground:  #aaaaaa
 *background:  #2e3436
 
-URxvt*font: xft:Monaco Nerd Font Mono:weight=bold:size=12
+URxvt*font: xft:Monaco Nerd Font Mono:size=12
 URxvt*scrollWithBuffer: true
 URxvt*scrollTtyKeypress: true
 URxvt*scrollTtyOutput: false
@@ -19,6 +19,7 @@ URxvt*saveLines: 1048576
 URxvt*scrollBar: false
 URxvt*geometry: 80x25
 
+URxvt*cursorBlink: true
 URxvt*cursorColor: #55aaff
 URxvt*pointerColor: #55aaff
 

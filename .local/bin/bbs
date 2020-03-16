@@ -1,8 +1,10 @@
 #!/usr/bin/env lua
 
-local font = "xft:Perfect DOS VGA 437:pixelsize=32"
+--local font = "xft:Perfect DOS VGA 437:pixelsize=32"
+local font = "xft:Px437 IBM EGA8:pixelsize=32"
 local command = "TERM=ansi COLORTERM=ansi LC_ALL=en_US.ISO-8859-1 urxvt -fn '"..font.."' -fb '"..font.."' -fi '"..font.."' -fbi '"..font.."' -fg grey -bg black -geometry 80x25"
 local bbses = {
+  blinken = "towel.blinkenlights.nl",
   isca = "bbs.iscabbs.com",
   mono = "mono.org",
   stardoc = "bbs.stardoc134.com 2323",
