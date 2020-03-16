@@ -1,0 +1,64 @@
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+
+my $defaultFont = '-*-fixed-medium-r-*-*-16-*-*-*-*-*-*-*';
+my $font = shift;
+
+sub setFont {
+  my $fn = shift;
+  my $force = shift;
+  if (! $force) {
+    $fn =~ s/^\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)$/-$1-$2-medium-r-$5-$6-$7-$8-$9-$10-$11-$12-$13-$14/;
+  }
+  print "\e]710;$fn\e\\";
+  if (! $force) {
+    $fn =~ s/^\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)$/-$1-$2-bold-r-$5-$6-$7-$8-$9-$10-$11-$12-$13-$14/;
+  }
+  print "\e]711;$fn\e\\";
+  if (! $force) {
+    $fn =~ s/^\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)$/-$1-$2-medium-o-$5-$6-$7-$8-$9-$10-$11-$12-$13-$14/;
+  }
+  print "\e]712;$fn\e\\";
+  if (! $force) {
+    $fn =~ s/^\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)$/-$1-$2-bold-o-$5-$6-$7-$8-$9-$10-$11-$12-$13-$14/;
+  }
+  print "\e]713;$fn\e\\";
+}
+
+sub setXftFont {
+  my $fn = shift;
+  my $force = shift;
+  my $extra = '';
+
+  print "\e]710;xft:$fn\e\\";
+  if (! $force) {
+    $extra = ":weight=bold";
+  }
+  print "\e]711;xft:$fn$extra\e\\";
+  if (! $force) {
+    $extra = ":style=italic";
+  }
+  print "\e]712;xft:$fn$extra\e\\";
+  if (! $force) {
+    $extra = ":weight=bold:style=italic";
+  }
+  print "\e]713;xft:$fn$extra\e\\";
+}
+
+if (! $font) {
+  setFont($defaultFont, 1);
+} elsif ($font eq 'big') {
+  setXftFont("PxPlus IBM EGA8:pixelsize=32", 1);
+} elsif ($font eq 'normal') {
+  setXftFont("Monaco Nerd Font Mono:size=12");
+} elsif ($font eq 'small') {
+  setFont("-*-courier-medium-r-*-*-12-*-*-*-*-*-*-*", 1);
+} elsif ($font eq 'tiny') {
+  setFont("-*-*-medium-r-*-*-*-*-*-*-m-*-*-*", 1);
+} elsif ($font =~ /^\-/) {
+  setFont($font);
+} else {
+  setXftFont($font);
+}

@@ -27,28 +27,28 @@ URxvt*pointerColor: #55aaff
 !URxvt*background: rgba:0000/0000/0000/eeee
 !URxvt*depth: 32
 ! Fake transparency
-URxvt*background:  #2e3436
+URxvt*background:  #000000
 URxvt*transparent: true
 !URxvt*shading: 10
 URxvt*tintColor:   #001144
 !--------------------
 
-URxvt*color0:      #2e3436
-URxvt*color1:      #a40000
-URxvt*color2:      #4e9a06
-URxvt*color3:      #8f5902
-URxvt*color4:      #204a87
-URxvt*color5:      #5c3566
-URxvt*color6:      #0088aa
-URxvt*color7:      #babdb6
-URxvt*color8:      #555753
-URxvt*color9:      #ef2929
-URxvt*color10:     #73d216
-URxvt*color11:     #fce94f
-URxvt*color12:     #729fcf
-URxvt*color13:     #ad7fa8
-URxvt*color14:     #55ddff
-URxvt*color15:     #eeeeec
+URxvt*color0:      #000000
+URxvt*color1:      #8a3622
+URxvt*color2:      #0c7e45
+URxvt*color3:      #aa7c3d
+URxvt*color4:      #2234d1
+URxvt*color5:      #5c2e78
+URxvt*color6:      #44aacc
+URxvt*color7:      #b5b5b5
+URxvt*color8:      #5e606e
+URxvt*color9:      #eb8a60
+URxvt*color10:     #6cd947
+URxvt*color11:     #ffd93f
+URxvt*color12:     #4c81fb
+URxvt*color13:     #e23d69
+URxvt*color14:     #7be2f9
+URxvt*color15:     #ffffff
 
 != Full Tango Theme
 ! Butter            #fce94f #edd400 #c4a000
@@ -70,4 +70,89 @@ URxvt*color15:     #eeeeec
 ! #cbdbfc #ffffff #9badb7 #847e87
 ! #696a6a #595652 #76428a #ac3232
 ! #d95763 #d77bba #8f974a #8a6f30
-
+!
+!= Endesga 32
+! #be4a2f #d77643 #ead4aa #e4a672
+! #b86f50 #733e39 #3e2731 #a22633
+! #e43b44 #f77622 #feae34 #fee761
+! #63c74d #3e8948 #265c42 #193c3e
+! #124e89 #0099db #2ce8f5 #ffffff
+! #c0cbdc #8b9bb4 #5a6988 #3a4466
+! #262b44 #181425 #ff0044 #68386c
+! #b55088 #f6757a #e8b796 #c28569
+!
+!= tic-80 Dawn Bringer 16
+! #140c1c #4e4a4e
+! #442434 #d04648
+! #346524 #6daa2c
+! #854c30 #dad45e
+! #30346d #597dce
+! #d27d2c #d2aa99
+! #8595a1 #6dc2ca
+! #757161 #deeed6
+!
+!= pico-8
+! #000000 #5f574f
+! #ff004d #ff77a8
+! #008751 #00e436
+! #ab5236 #ffec27
+! #1d2b53 #29adff
+! #7e2553 #83769c
+! #ffa300 #ffccaa
+! #c2c3c7 #fff1e8
+!
+!= ZX Arne
+! #000000 #3c351f
+! #a73211 #d85525
+! #629a31 #9cd33c
+! #e8bc50 #f1e782
+! #313390 #1559db
+! #a15589 #cd7a50
+! #28a4cb #65dcd6
+! #bfbfbd #f2f1ed
+!
+!= Dawn Bringer 8
+! black       #000000
+! dark purple #55415f
+! grey        #646964
+! red         #d77355
+! blue        #508cd7
+! green       #65b964
+! yellow      #e6c86e
+! white       #dcf5ff
+!
+!= Arne 16
+! #000000
+! #493c2b
+! #be2633
+! #e06f8b
+! #9d9d9d
+! #a46422
+! #eb8931
+! #f7e26b
+! #ffffff
+! #1b2632
+! #2f484e
+! #44891a
+! #a3ce27
+! #005784
+! #31a2f2
+! #b2dcef
+!
+!= CGArne
+! #000000
+! #5e606e
+! #2234d1
+! #4c81fb
+! #0c7e45
+! #6cd947
+! #44aacc
+! #7be2f9
+! #8a3622
+! #eb8a60
+! #5c2e78
+! #e23d69
+! #aa5c3d
+! #ffd93f
+! #b5b5b5
+! #ffffff
