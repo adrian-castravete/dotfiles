@@ -12,7 +12,7 @@ then
   notify-send "DUNST_COMMAND_PAUSE"
 fi
 
-slock
+i3lock --no-fork
 if ! pidof xautolock
 then
   xautolock -time 5 -locker lock -notify 5 &
