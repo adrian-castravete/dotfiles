@@ -1,0 +1,59 @@
+#!/usr/bin/env python
+
+"""YAML to JSON translator
+
+This program takes an input YAML object and turns it into a JSON object.
+The script may be called without arguments, in which case it waits until the end of default input
+(STDIN) and writes to default output (STDOUT).
+It can also accept one or two filenames(paths). If only one path is given the second is inferred.
+
+"""
+
+import argparse
+import json
+import os
+import sys
+
+import yaml
+
+
+def file_yaml_to_json(in_path, out_path, pretty=False):
+    with open(in_path) as fin:
+        yaml_contents = fin.read()
+
+    contents = yaml.safe_load(yaml_contents)
+    kwargs = {'separators': [',', ':']}
+    if pretty:
+        kwargs.update({'separators': [',', ': '],
+                       'indent': 2})
+
+    with open(out_path, 'w') as fout:
+        json.dump(contents, fout, **kwargs)
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('in_file', nargs="?",
+                        help="The input filename; if not given STDIN-STDOUT mode is enabled.")
+    parser.add_argument('out_file', nargs="?",
+                        help=("The output filename; if not given filename is inferred from input "
+                              " filename with the extension changed to '.json'."))
+    parser.add_argument('-p', '--pretty', action="store_true",
+                        help="Pretty print the JSON in the output file.")
+
+    args = parser.parse_args()
+
+    if args.out_file:
+        file_yaml_to_json(args.in_file, args.out_file, pretty=args.pretty)
+        print("Done.")
+
+    elif args.in_file:
+        out_file = os.path.splitext(args.in_file)[0] + '.json'
+        file_yaml_to_json(args.in_file, out_file, pretty=args.pretty)
+        print("Done.")
+
+    else:
+        json.dump(yaml.safe_load(sys.stdin.read()), sys.stdout, indent=2, separators=[',', ': '])
+
+if __name__ == '__main__':
+    main()

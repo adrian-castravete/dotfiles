@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-my $defaultFont = '-*-fixed-medium-r-*-*-16-*-*-*-*-*-*-*';
+my $defaultFont = '-*-courier-medium-r-*-*-0-0-100-100-m-*-*-*';
 my $font = shift;
 
 sub setFont {
@@ -19,10 +19,16 @@ sub setFont {
   print "\e]711;$fn\e\\";
   if (! $force) {
     $fn =~ s/^\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)$/-$1-$2-medium-o-$5-$6-$7-$8-$9-$10-$11-$12-$13-$14/;
+    if (! `xlsfonts -fn '$fn'`) {
+      $fn =~ s/^\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)$/-$1-$2-medium-i-$5-$6-$7-$8-$9-$10-$11-$12-$13-$14/;
+    }
   }
   print "\e]712;$fn\e\\";
   if (! $force) {
     $fn =~ s/^\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)$/-$1-$2-bold-o-$5-$6-$7-$8-$9-$10-$11-$12-$13-$14/;
+    if (! `xlsfonts -fn '$fn'`) {
+      $fn =~ s/^\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)$/-$1-$2-bold-i-$5-$6-$7-$8-$9-$10-$11-$12-$13-$14/;
+    }
   }
   print "\e]713;$fn\e\\";
 }
@@ -48,13 +54,13 @@ sub setXftFont {
 }
 
 if (! $font) {
-  setFont($defaultFont, 1);
+  setFont($defaultFont);
 } elsif ($font eq 'big') {
   setXftFont("PxPlus IBM EGA8:pixelsize=32", 1);
 } elsif ($font eq 'normal') {
   setXftFont("Monaco Nerd Font Mono:size=12");
 } elsif ($font eq 'small') {
-  setFont("-*-courier-medium-r-*-*-12-*-*-*-*-*-*-*", 1);
+  setFont("-*-courier-medium-r-*-*-12-*-*-*-*-*-*-*");
 } elsif ($font eq 'tiny') {
   setFont("-*-*-medium-r-*-*-*-*-*-*-m-*-*-*", 1);
 } elsif ($font =~ /^\-/) {
