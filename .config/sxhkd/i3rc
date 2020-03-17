@@ -24,3 +24,9 @@ super + F12
 
 F11
   pcmanfm
+
+F12
+  dmenu_run_history -p 'Run:' -l 10
+
+shift + F12
+  i3-dmenu-desktop --dmenu 'dmenu -p "Start:" -l 10'
