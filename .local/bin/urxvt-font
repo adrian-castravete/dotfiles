@@ -67,6 +67,12 @@ if (! $font) {
   setFont("-misc-fixed-medium-r-*-*-13-*-*-*-*-*-iso10646-*");
 } elsif ($font eq 'tiny') {
   setFont("-misc-fixed-medium-r-*-*-10-*-*-*-*-*-iso10646-*", 1);
+} elsif ($font eq 'cga') {
+  setXftFont("PxPlus IBM CGA:pixelsize=16", 1);
+} elsif ($font eq 'ega') {
+  setXftFont("PxPlus IBM EGA8:pixelsize=16", 1);
+} elsif ($font eq 'vga') {
+  setXftFont("PxPlus IBM VGA8:pixelsize=16", 1);
 } elsif ($font =~ /^\-/) {
   setFont($font);
 } else {
