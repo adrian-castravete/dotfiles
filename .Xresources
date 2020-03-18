@@ -6,8 +6,8 @@ Xft.antialias: 1
 Xft.rgba: rgb
 Xft.lcdfilter: lcddefault
 
-*foreground:  #aaaaaa
-*background:  #2e3436
+*foreground:  #b5b5b5
+*background:  #000000
 
 URxvt*font: xft:Monaco Nerd Font Mono:size=12
 URxvt*scrollWithBuffer: true

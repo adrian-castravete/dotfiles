@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-my $defaultFont = '-*-courier-medium-r-*-*-0-0-100-100-m-*-*-*';
+my $defaultFont = '-misc-fixed-medium-r-*-*-15-*-*-*-*-*-iso10646-*';
 my $font = shift;
 
 sub setFont {
@@ -40,15 +40,15 @@ sub setXftFont {
 
   print "\e]710;xft:$fn\e\\";
   if (! $force) {
-    $extra = ":weight=bold";
+    $extra = ":Bold";
   }
   print "\e]711;xft:$fn$extra\e\\";
   if (! $force) {
-    $extra = ":style=italic";
+    $extra = ":Italic";
   }
   print "\e]712;xft:$fn$extra\e\\";
   if (! $force) {
-    $extra = ":weight=bold:style=italic";
+    $extra = ":Bold:Italic";
   }
   print "\e]713;xft:$fn$extra\e\\";
 }
@@ -57,12 +57,16 @@ if (! $font) {
   setFont($defaultFont);
 } elsif ($font eq 'big') {
   setXftFont("PxPlus IBM EGA8:pixelsize=32", 1);
+} elsif ($font eq 'telnet') {
+  setXftFont("Perfect DOS VGA 437:pixelsize=32", 1);
 } elsif ($font eq 'normal') {
   setXftFont("Monaco Nerd Font Mono:size=12");
+} elsif ($font eq 'courier') {
+  setFont("-*-courier-medium-r-*-*-0-0-100-100-m-*-*-*");
 } elsif ($font eq 'small') {
-  setFont("-*-courier-medium-r-*-*-12-*-*-*-*-*-*-*");
+  setFont("-misc-fixed-medium-r-*-*-13-*-*-*-*-*-iso10646-*");
 } elsif ($font eq 'tiny') {
-  setFont("-*-*-medium-r-*-*-*-*-*-*-m-*-*-*", 1);
+  setFont("-misc-fixed-medium-r-*-*-10-*-*-*-*-*-iso10646-*", 1);
 } elsif ($font =~ /^\-/) {
   setFont($font);
 } else {
