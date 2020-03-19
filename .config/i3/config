@@ -186,7 +186,7 @@ exec --no-startup-id xautolock -time 5 -locker lock -notify 5 &
 exec --no-startup-id sxhkd -c $HOME/.config/sxhkd/i3rc &
 exec --no-startup-id dunst &
 exec --no-startup-id pnmixer &
-exec --no-startup-id xfce4-power-manager &
+exec --no-startup-id xfce4-power-manager --no-daemon &
 exec --no-startup-id wicd-gtk -t &
 
 exec_always --no-startup-id sh $HOME/.screenlayout/default.sh &
