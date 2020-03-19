@@ -1,12 +1,12 @@
 #!/bin/bash
 
-function nonzero_return() {
+function nonzero_return {
 	RETVAL=$?
 	[ $RETVAL -ne 0 ] && echo -e " \e[41;37;1m$RETVAL\e[m"
 }
 
 # get current branch in git repo
-function parse_git_branch() {
+function parse_git_branch {
 	BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
 	if [ ! "${BRANCH}" == "" ]
 	then
@@ -53,4 +53,4 @@ function parse_git_dirty {
 }
 
 export PROMPT_COMMAND='fkbm_retval=$(nonzero_return)'
-export PS1='\[\e[94m\][\[\e[1m\]\w\[\e[m\]\[\e[94m\]]\[\e[m\]\n\[\e[91m\]\!:\j\[\e[m\] \[\e[93m\]\t\[\e[m\] \[\e[92;3m\]\u\[\e[m\]\[\e[96m\]@\[\e[94m\]\h\[\e[m\]\[\e[95m\]`parse_git_branch`\[\e[m\]$fkbm_retval\n\[\e[1m\]\\$\[\e[m\] '
+export PS1='\[\e[91m\]\!:\j\[\e[m\] \[\e[93m\]\t\[\e[m\] \[\e[92;3m\]\u\[\e[m\]\[\e[96m\]@\[\e[94m\]\h\[\e[m\]\[\e[95m\]`parse_git_branch`\[\e[m\]$fkbm_retval `fancy-pwd -b`\n\[\e[1m\]\\$\[\e[m\] '
