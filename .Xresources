@@ -6,7 +6,7 @@ Xft.antialias: 1
 Xft.rgba: rgb
 Xft.lcdfilter: lcddefault
 
-*foreground:  #b5b5b5
+*foreground:  #aaaaaa
 *background:  #000000
 
 URxvt*font: xft:Monaco Nerd Font Mono:size=12
@@ -33,22 +33,22 @@ URxvt*transparent: true
 URxvt*tintColor:   #000055
 !--------------------
 
-URxvt*color0:      #000000
-URxvt*color1:      #ff004d
-URxvt*color2:      #008751
-URxvt*color3:      #ab5236
-URxvt*color4:      #1d2b53
-URxvt*color5:      #7e2553
-URxvt*color6:      #ffa300
-URxvt*color7:      #c2c3c7
-URxvt*color8:      #5f574f
-URxvt*color9:      #ff77a8
-URxvt*color10:     #00e436
-URxvt*color11:     #ffec27
-URxvt*color12:     #29adff
-URxvt*color13:     #83769c
-URxvt*color14:     #ffccaa
-URxvt*color15:     #fff1e8
+URxvt*color0:      #000
+URxvt*color1:      #a00
+URxvt*color2:      #0a0
+URxvt*color3:      #a50
+URxvt*color4:      #00a
+URxvt*color5:      #a0a
+URxvt*color6:      #0aa
+URxvt*color7:      #aaa
+URxvt*color8:      #555
+URxvt*color9:      #f55
+URxvt*color10:     #5f5
+URxvt*color11:     #ff5
+URxvt*color12:     #55f
+URxvt*color13:     #f5f
+URxvt*color14:     #5ff
+URxvt*color15:     #fff
 
 != Full Tango Theme
 ! Butter            #fce94f #edd400 #c4a000
@@ -141,18 +141,18 @@ URxvt*color15:     #fff1e8
 !
 != CGArne
 ! #000000
-! #5e606e
-! #2234d1
-! #4c81fb
-! #0c7e45
-! #6cd947
-! #44aacc
-! #7be2f9
 ! #8a3622
-! #eb8a60
-! #5c2e78
-! #e23d69
+! #0c7e45
 ! #aa5c3d
-! #ffd93f
+! #2234d1
+! #5c2e78
+! #44aacc
 ! #b5b5b5
+! #5e606e
+! #eb8a60
+! #6cd947
+! #ffd937
+! #4c81fb
+! #e23d69
+! #7be2f9
 ! #ffffff
