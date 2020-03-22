@@ -30,25 +30,25 @@ URxvt*pointerColor: #55aaff
 URxvt*background:  #000000
 URxvt*transparent: true
 !URxvt*shading: 10
-URxvt*tintColor:   #001144
+URxvt*tintColor:   #000055
 !--------------------
 
 URxvt*color0:      #000000
-URxvt*color1:      #8a3622
-URxvt*color2:      #0c7e45
-URxvt*color3:      #aa7c3d
-URxvt*color4:      #2234d1
-URxvt*color5:      #5c2e78
-URxvt*color6:      #44aacc
-URxvt*color7:      #b5b5b5
-URxvt*color8:      #5e606e
-URxvt*color9:      #eb8a60
-URxvt*color10:     #6cd947
-URxvt*color11:     #ffd93f
-URxvt*color12:     #4c81fb
-URxvt*color13:     #e23d69
-URxvt*color14:     #7be2f9
-URxvt*color15:     #ffffff
+URxvt*color1:      #ff004d
+URxvt*color2:      #008751
+URxvt*color3:      #ab5236
+URxvt*color4:      #1d2b53
+URxvt*color5:      #7e2553
+URxvt*color6:      #ffa300
+URxvt*color7:      #c2c3c7
+URxvt*color8:      #5f574f
+URxvt*color9:      #ff77a8
+URxvt*color10:     #00e436
+URxvt*color11:     #ffec27
+URxvt*color12:     #29adff
+URxvt*color13:     #83769c
+URxvt*color14:     #ffccaa
+URxvt*color15:     #fff1e8
 
 != Full Tango Theme
 ! Butter            #fce94f #edd400 #c4a000
