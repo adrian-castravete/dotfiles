@@ -1,8 +1,8 @@
 #!/bin/bash
 
-export PATH=$HOME/.local/bin:$HOME/bin:$PATH
+export PATH=$HOME/.local/bin.local:$HOME/.local/bin:$PATH
 
-sh $HOME/.profile
+sh $HOME/.xprofile
 xrdb $HOME/.Xresources
 setxkbmap ro
 
