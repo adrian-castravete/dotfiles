@@ -30,7 +30,7 @@ URxvt*pointerColor: #55aaff
 URxvt*background:  #000000
 URxvt*transparent: true
 !URxvt*shading: 10
-URxvt*tintColor:   #000055
+URxvt*tintColor:   #00a
 !--------------------
 
 URxvt*color0:      #000
