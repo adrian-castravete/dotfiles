@@ -1,0 +1,9 @@
+#!/bin/bash
+
+alias vi="vim -Cu NONE"
+alias byobu="TERM=screen-256color byobu"
+alias bynewt="TERM=screen-256color byobu new -t "
+
+alias sstartx="startx;exit"
+
+source $HOME/.aliases.local
