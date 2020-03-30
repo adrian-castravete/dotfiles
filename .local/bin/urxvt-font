@@ -3,12 +3,29 @@
 use strict;
 use warnings;
 
+my $home = $ENV{'HOME'};
 my $defaultFont = '-misc-fixed-medium-r-*-*-15-*-*-*-*-*-iso10646-*';
-my $font = shift;
+my $font;
+my $disableWriteFontRC = 0;
+my $disableStyles = 0;
+
+for my $var (@ARGV) {
+  if ($var eq '--no-write-rc' or $var eq '-n') {
+    $disableWriteFontRC = 1;
+  } elsif ($var eq '--no-styles' or $var eq '-s') {
+    $disableStyles = 1;
+  } elsif (!$font) {
+    $font = $var;
+  } else {
+    die "Extra or unknown argument '$var'.\n";
+  }
+}
 
 sub setFont {
-  my $fn = shift;
-  my $force = shift;
+  my $ofn = shift;
+  my $fn = $ofn;
+  my $force = shift || $disableStyles;
+
   if (! $force) {
     $fn =~ s/^\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)\-(.*)$/-$1-$2-medium-r-$5-$6-$7-$8-$9-$10-$11-$12-$13-$14/;
   }
@@ -31,11 +48,18 @@ sub setFont {
     }
   }
   print "\e]713;$fn\e\\";
+
+  if (! $disableWriteFontRC) {
+    open(my $fout, '>', "$home/.urxvt-font-rc.sh");
+    print $fout "#!/bin/bash\n\nurxvt-font $ofn";
+    close $fout;
+  }
 }
 
 sub setXftFont {
-  my $fn = shift;
-  my $force = shift;
+  my $ofn = shift;
+  my $fn = $ofn;
+  my $force = shift || $disableStyles;
   my $extra = '';
 
   print "\e]710;xft:$fn\e\\";
@@ -51,6 +75,12 @@ sub setXftFont {
     $extra = ":Bold:Italic";
   }
   print "\e]713;xft:$fn$extra\e\\";
+
+  if (! $disableWriteFontRC) {
+    open(my $fout, '>', "$home/.urxvt-font-rc.sh");
+    print $fout "#!/bin/bash\n\nurxvt-font $ofn";
+    close $fout;
+  }
 }
 
 if (! $font) {
@@ -80,3 +110,5 @@ if (! $font) {
 } else {
   setXftFont($font);
 }
+
+# vim: set sw=2 ts=2 et:

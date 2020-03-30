@@ -3,7 +3,7 @@
 export PATH=$HOME/.local/bin.local:$HOME/.local/bin:$PATH
 
 sh $HOME/.xprofile
-xrdb $HOME/.Xresources
+xrdb -I$HOME .Xresources
 setxkbmap ro
 
 sh $HOME/.screenlayout/default.sh &
