@@ -6,4 +6,7 @@ alias bynewt="TERM=screen-256color byobu new -t "
 
 alias sstartx="startx;exit"
 
-source $HOME/.aliases.local
+if [ -e $HOME/.aliases.local ]
+then
+	source $HOME/.aliases.local
+fi
