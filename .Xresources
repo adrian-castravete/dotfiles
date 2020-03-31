@@ -52,6 +52,7 @@ URxvt*color12:     #55f
 URxvt*color13:     #f5f
 URxvt*color14:     #5ff
 URxvt*color15:     #fff
+URxvt*internalBorder: 0
 
 != Full Tango Theme
 ! Butter            #fce94f #edd400 #c4a000
