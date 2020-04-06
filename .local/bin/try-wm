@@ -10,6 +10,10 @@ XEPHYR_PID=$?
 sleep 1s
 export DISPLAY=:42.0
 cd ~
+export PATH=$HOME/.local/bin.local:$HOME/.local/bin:$PATH
+sh $HOME/.xprofile
+xrdb -I$HOME .Xresources
+setxkbmap ro
 $*
 export DISPLAY=
 kill -KILL $XEPHYR_PID
