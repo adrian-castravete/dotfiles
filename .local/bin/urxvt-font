@@ -52,7 +52,7 @@ sub setFont {
   if (! $disableWriteFontRC) {
     open(my $fout, '>', "$home/.urxvt-font-rc.sh");
     print $fout "#!/bin/bash\n\nurxvt-font $ofn";
-    if ($disableStyles) {
+    if ($force) {
       print $fout " -s";
     }
     close $fout;
@@ -81,8 +81,8 @@ sub setXftFont {
 
   if (! $disableWriteFontRC) {
     open(my $fout, '>', "$home/.urxvt-font-rc.sh");
-    print $fout "#!/bin/bash\n\nurxvt-font $ofn";
-    if ($disableStyles) {
+    print $fout "#!/bin/bash\n\nurxvt-font '$ofn'";
+    if ($force) {
       print $fout " -s";
     }
     close $fout;
