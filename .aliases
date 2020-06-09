@@ -1,6 +1,8 @@
 #!/bin/bash
 
-alias vi="vim -Cu NONE"
+alias vim="TERM=xterm-256color vim"
+alias vi="TERM=xterm-256color vim -Cu NONE"
+alias e=vi
 alias byobu="TERM=screen-256color byobu"
 alias bynewt="TERM=screen-256color byobu new -t "
 

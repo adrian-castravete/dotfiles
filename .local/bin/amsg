@@ -1,0 +1,3 @@
+#!/bin/bash
+
+vim -Cu NONE /tmp/$1.asciidoc && asciidoc /tmp/$1.asciidoc && surf /tmp/$1.html
