@@ -1,0 +1,194 @@
+# Global Settings
+#################
+UseMouseWheel=0
+
+IconPath="/usr/share/icons/Moka:/usr/share/icons/Adwaita:/usr/share/icons/gnome:/usr/share/icons/HighContrast:/usr/share/icons:/usr/share/pixmaps"
+
+RunCommand="gmrun"
+TerminalCommand="exo-open --launch TerminalEmulator"
+OpenCommand="exo-open --launch FileBrowser"
+
+#  Desktop Settings
+###################
+ButtonRaiseMask=1
+DesktopWinMenuButton=1  # 0
+DesktopWinListButton=2
+DesktopMenuButton=3
+
+MinimizeToDesktop=1
+MiniIconsPlaceHorizontal=1
+MiniIconsRightToLeft=0
+MiniIconsBottomToTop=1
+
+#  Window Settings
+##################
+ShowMoveSizeStatus=1
+
+OpaqueMove=1
+OpaqueResize=1
+
+ConsiderHBorder=1
+ConsiderVBorder=1
+HideBordersMaximized=0
+TitleBarMaximizeButton=1
+TitleBarRollupButton=0
+LowerOnClickWhenRaised=1
+RolloverButtonsSupported=0
+
+QuickSwitchHugeIcon=1
+QuickSwitchToAllWorkspaces=1
+QuickSwitchSmallWindow=1
+QuickSwitchGroupWorkspaces=1
+QuickSwitchFillSelection=1
+# ArrangeWindowsOnScreenSizeChange=1 # 0/1
+
+#  Menu Settings
+################
+MenuMouseTracking=1
+
+AutoReloadMenus=1
+
+ShowProgramsMenu=0
+ShowSettingsMenu=0
+ShowFocusModeMenu=0
+ShowThemesMenu=0
+ShowHelp=0
+ShowRun=1
+ShowWindowList=1
+
+ShowLogoutMenu=1
+ShowLogoutSubMenu=1
+LogoutCommand=""
+ConfirmLogout=1 # Change to 0 if you add a logout command
+ShutdownCommand="sudo halt"
+RebootCommand="sudo reboot"
+LockCommand="light-locker-command --lock"
+
+#  Task Bar Settings
+####################
+ShowTaskBar=1
+TaskBarAtTop=1
+TaskBarKeepBelow=1
+TaskBarAutoHide=0
+EnableAddressBar=0
+TaskBarGraphHeight=16
+
+TaskBarShowShowDesktopButton=0
+TaskBarShowStartMenu=1
+TaskBarShowWindowListMenu=0
+TaskBarShowCollapseButton=0
+
+TaskBarEnableSystemTray=1
+
+TaskBarShowWindows=1
+TaskBarShowWindowIcons=1
+TaskBarShowAllWindows=0
+
+TaskBarDoubleHeight=0
+TaskBarShowTray=0
+TrayShowAllWindows=0
+
+TaskBarShowWorkspaces=1
+WorkspaceNames=" 1 ", " 2 ", " 3 ", " 4 "
+
+TaskBarShowClock=1
+TaskBarClockLeds=0
+ClockCommand="osmo -c"
+TimeFormat="%H:%M:%S"
+DateFormat="%Y-%m-%d"
+
+TaskBarShowAPMAuto=1
+
+TaskBarShowMEMStatus=1
+
+TaskBarShowMailboxStatus=0
+MailCommand="claws-mail"
+
+TaskBarShowCPUStatus=1
+CPUStatusCommand="xfce4-taskmanager"
+
+TaskBarShowNetStatus=1
+NetStatusCommand="exo-open --launch TerminalEmulator netstat -c"
+NetworkStatusDevice="[ew]*"
+
+TrayDrawBevel=0
+ColorClock=""
+ColorClockText="rgb:00/00/00"
+
+#  Pager Settings
+#################
+PagerShowPreview=0
+
+#  Keyboard Shortcuts
+#####################
+Win95Keys=1
+
+ModSuperIsCtrlAlt=1
+
+KeyWinArrangeN=""
+KeyWinArrangeNE=""
+KeyWinArrangeE="Ctrl+Alt+Right"
+KeyWinArrangeSE=""
+KeyWinArrangeS=""
+KeyWinArrangeSW=""
+KeyWinArrangeW="Ctrl+Alt+Left"
+KeyWinArrangeNW=""
+KeyWinArrangeC="Ctrl+Alt+Up"
+
+KeySysSwitchNext="Alt+Tab"
+KeySysSwitchLast="Alt+Shift+Tab"
+
+KeySysWinNext="Alt+Esc"
+KeySysWinPrev="Alt+Shift+Esc"
+KeySysWinMenu="Shift+Esc"
+
+KeySysDialog="Alt+Ctrl+Del"
+
+KeySysMenu="Ctrl+Esc"
+KeySysWindowList="Alt+Ctrl+Esc"
+KeySysAddressBar="Alt+Ctrl+b"
+
+KeySysWorkspacePrev=""
+KeySysWorkspaceNext=""
+KeySysWorkspaceLast=""
+KeySysWorkspacePrevTakeWin=""
+KeySysWorkspaceNextTakeWin=""
+KeySysWorkspaceLastTakeWin=""
+KeySysWorkspace1="Alt+Ctrl+1"
+KeySysWorkspace2="Alt+Ctrl+2"
+KeySysWorkspace3="Alt+Ctrl+3"
+KeySysWorkspace4="Alt+Ctrl+4"
+KeySysWorkspace1TakeWin="Alt+Ctrl+Shift+1"
+KeySysWorkspace2TakeWin="Alt+Ctrl+Shift+2"
+KeySysWorkspace3TakeWin="Alt+Ctrl+Shift+3"
+KeySysWorkspace4TakeWin="Alt+Ctrl+Shift+4"
+
+KeySysTileVertical=""
+KeySysTileHorizontal=""
+KeySysCascade=""
+KeySysArrange=""
+KeySysArrangeIcons=""
+KeySysMinimizeAll=""
+KeySysHideAll=""
+KeySysUndoArrange=""
+KeySysShowDesktop="Alt+Ctrl+d"
+KeySysCollapseTaskBar=""
+
+#
+# icewmbg preferences
+#
+# IMPORTANT: You MUST run icewmbg (probably before icewm)
+#            to set the background!
+#
+
+#  Display desktop background centered and not tiled
+DesktopBackgroundCenter=1 # 0/1
+#DesktopBackgroundImage="/home/fkbm/.local/share/backgrounds/hexagon.png"
+DesktopBackgroundImage=""		# Prevent IceWM showing a background image
+DesktopBackgroundColor="rgb:00/00/00"		# Prevent IceWM showing a background colour
+
+#  Support for semitransparent terminals like Eterm or gnome-terminal
+SupportSemitransparency=1 # 0/1
+
+#  Desktop background scaled to full screen
+DesktopBackgroundScaled=1 # 0/1

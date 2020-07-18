@@ -1,0 +1,161 @@
+
+menu "Accesorii" /usr/share/icons/Faenza-Cupertino-mini/categories/32/applications-accessories.png { 
+prog "Administrator de arhive" /usr/share/icons/Faenza-Cupertino-mini/apps/32/file-roller.png file-roller 
+prog "App Killer" /usr/share/icons/Faenza-Cupertino-mini/actions/32/gtk-no.png xkill
+prog "Calcurse" /usr/share/icons/Faenza-Cupertino-mini/apps/48/evolution-calendar.png desktop-defaults-run -t calcurse
+prog "CherryTree" /usr/share/icons/Faenza-Cupertino-mini/apps/48/cherrytree.png cherrytree 
+prog "ClipIt" /usr/share/icons/Faenza-Cupertino-mini/apps/48/clipit-trayicon.png clipit
+prog "Conky Toggle" /usr/share/icons/Faenza-Cupertino-mini/apps/32/utilities-system-monitor.png conkytoggle.sh
+prog "Galculator" /usr/share/icons/Faenza-Cupertino-mini/apps/32/galculator.png galculator
+prog "GVim" /usr/share/icons/Faenza-Cupertino-mini/apps/32/gvim.png gvim -f 
+prog "Leafpad" /usr/share/icons/Faenza-Cupertino-mini/apps/32/leafpad.png leafpad 
+prog "Midnight Commander editor" /usr/share/icons/hicolor/64x64/apps/MidnightCommander.png desktop-defaults-run -t mcedit
+prog "Other Desktops" /usr/share/icons/antiX/cs-desktop-effects.png /usr/local/lib/desktop-session/desktop-session-menu-window ignore-settings
+prog "Rox Panel Toggle" /usr/share/icons/Faenza-Cupertino-mini/apps/32/gnome-panel.png paneltoggle.sh
+prog "Run" /usr/share/icons/Faenza-Cupertino-mini/actions/32/system-run.png gexec
+prog "Rxvt Color Unicode Terminal" /usr/share/pixmaps/urxvt_48x48.xpm urxvt
+prog "Searchmonkey" /usr/share/pixmaps/searchmonkey/searchmonkey-32x32.png searchmonkey
+prog "SpaceFM File Search" /usr/share/icons/Faenza-Cupertino-mini/apps/48/spacefm-find.png spacefm --find-files 
+prog "Xfburn" /usr/share/icons/Faenza-Cupertino-mini/devices/32/media-cdrom.png xfburn
+}
+menu "Birou" /usr/share/icons/Faenza-Cupertino-mini/categories/32/applications-office.png { 
+prog "LibreOffice" /usr/share/icons/Faenza-Cupertino-mini/apps/32/libreoffice-startcenter.png libreoffice 
+prog "LibreOffice Calc" /usr/share/icons/Faenza-Cupertino-mini/apps/32/libreoffice-calc.png libreoffice --calc 
+prog "LibreOffice Draw" /usr/share/icons/Faenza-Cupertino-mini/apps/32/libreoffice-draw.png libreoffice --draw 
+prog "LibreOffice Impress" /usr/share/icons/Faenza-Cupertino-mini/apps/32/libreoffice-impress.png libreoffice --impress 
+prog "LibreOffice Math" /usr/share/icons/Faenza-Cupertino-mini/apps/32/libreoffice-math.png libreoffice --math 
+prog "LibreOffice Writer" /usr/share/icons/Faenza-Cupertino-mini/apps/32/libreoffice-writer.png libreoffice --writer 
+prog "Vizualizator de documente" /usr/share/icons/Faenza-Cupertino-mini/apps/32/evince.png evince 
+}
+menu "Chromium Apps" /usr/share/icons/Faenza-Cupertino-mini/apps/32/chromium-browser.png { 
+prog "Chrome Apps & Extensions Developer Tool" /home/fkbm/.local/share/icons/hicolor/32x32/apps/chrome-ohmmkhmmmpcnpikjeljgnaoabkaalbgc-Default.png /usr/bin/chromium --profile-directory=Default --app-id=ohmmkhmmmpcnpikjeljgnaoabkaalbgc
+prog "Chrome Dev Editor" /home/fkbm/.local/share/icons/hicolor/32x32/apps/chrome-pnoffddplpippgcfjdhbmhkofpnaalpg-Default.png /usr/bin/chromium --profile-directory=Default --app-id=pnoffddplpippgcfjdhbmhkofpnaalpg
+prog "Entanglement" /home/fkbm/.local/share/icons/hicolor/128x128/apps/chrome-cmnpffgfpcohhpoddjankjanolcekbni-Default.png /usr/bin/chromium --profile-directory=Default --app-id=cmnpffgfpcohhpoddjankjanolcekbni
+prog "Google Keep - notes and lists" /home/fkbm/.local/share/icons/hicolor/48x48/apps/chrome-hmjkmjkepdijhoojdojkdfohbdgmmhki-Default.png /usr/bin/chromium --profile-directory=Default --app-id=hmjkmjkepdijhoojdojkdfohbdgmmhki
+prog "Marxico" /home/fkbm/.local/share/icons/hicolor/48x48/apps/chrome-kidnkfckhbdkfgbicccmdggmpgogehop-Default.png /usr/bin/chromium --profile-directory=Default --app-id=kidnkfckhbdkfgbicccmdggmpgogehop
+prog "Minimalist Markdown Editor" /home/fkbm/.local/share/icons/hicolor/48x48/apps/chrome-pghodfjepegmciihfhdipmimghiakcjf-Default.png /usr/bin/chromium --profile-directory=Default --app-id=pghodfjepegmciihfhdipmimghiakcjf
+prog "Mutual" /home/fkbm/.local/share/icons/hicolor/128x128/apps/chrome-okjiffbojjamcpfghohbgmacbjjgmndi-Default.png /usr/bin/chromium --profile-directory=Default --app-id=okjiffbojjamcpfghohbgmacbjjgmndi
+prog "Polycraft" /home/fkbm/.local/share/icons/hicolor/128x128/apps/chrome-eopfmbpfhhfnklgmjpoehcjaajhpbhbl-Default.png /usr/bin/chromium --profile-directory=Default --app-id=eopfmbpfhhfnklgmjpoehcjaajhpbhbl
+prog "Postman" /home/fkbm/.local/share/icons/hicolor/32x32/apps/chrome-fhbjgbiflinjbdggehcddcbncdddomop-Default.png /usr/bin/chromium --profile-directory=Default --app-id=fhbjgbiflinjbdggehcddcbncdddomop
+}
+menu "Educație" /usr/share/icons/Faenza-Cupertino-mini/categories/32/applications-science.png { 
+prog "LibreOffice Math" /usr/share/icons/Faenza-Cupertino-mini/apps/32/libreoffice-math.png libreoffice --math 
+}
+menu "Grafică" /usr/share/icons/Faenza-Cupertino-mini/categories/32/applications-graphics.png { 
+prog "Gcolor2" /usr/share/pixmaps/gcolor2/gcolor2.xpm gcolor2
+prog "GIMP" /usr/share/icons/Faenza-Cupertino-mini/apps/32/gimp.png gimp-2.8 
+prog "Gtkam Digital Camera Browser" /usr/share/pixmaps/gtkam-camera.png gtkam
+prog "ImageMagick (color depth=q16)" /usr/share/icons/hicolor/32x32/apps/display-im6.q16.png /usr/bin/display-im6.q16 -nostdin 
+prog "LibreOffice Draw" /usr/share/icons/Faenza-Cupertino-mini/apps/32/libreoffice-draw.png libreoffice --draw 
+prog "Mirage" /usr/share/pixmaps/mirage.png mirage 
+prog "mtPaint graphic editor" /usr/share/icons/Faenza-Cupertino-mini/apps/32/mtpaint.png mtpaint 
+prog "Scanare simplă" /usr/share/icons/Faenza-Cupertino-mini/devices/32/scanner.png simple-scan
+prog "Screenshot" /usr/share/icons/Faenza-Cupertino-mini/devices/32/camera.png antixscreenshot.sh
+prog "Vizualizator de documente" /usr/share/icons/Faenza-Cupertino-mini/apps/32/evince.png evince 
+}
+menu "Internet" /usr/share/icons/Faenza-Cupertino-mini/categories/32/applications-internet.png { 
+prog "Ceni" /usr/share/icons/hicolor/32x32/apps/ceni.png desktop-defaults-run -t sudo ceni
+prog "Chromium Web Browser" /usr/share/icons/hicolor/32x32/apps/chromium.xpm /usr/bin/chromium 
+prog "Claws Mail" /usr/share/icons/Faenza-Cupertino-mini/apps/32/claws-mail.png claws-mail 
+prog "Connectshares" /usr/share/pixmaps/connectshares.png connectshares
+prog "Connectshares Configuration" /usr/share/pixmaps/connectshares-config.png connectshares-config
+prog "Dillo" /usr/share/pixmaps/dillo.png dillo 
+prog "Disconnectshares" /usr/share/pixmaps/disconnectshares.png disconnectshares
+prog "Droopy" /usr/share/pixmaps/droopy.png droopy.sh
+prog "Firefox ESR" /usr/share/icons/hicolor/32x32/apps/firefox-esr.png /usr/lib/firefox-esr/firefox-esr 
+prog "gFTP" /usr/share/pixmaps/gftp.png gftp-gtk 
+prog "GNOME PPP" /usr/share/icons/hicolor/48x48/apps/gnome-ppp.png gnome-ppp
+prog "GPRS-EDGE-UMTS-Panel" /usr/share/icons/Faenza-Cupertino-mini/devices/32/network-wireless.png umts-panel
+prog "HexChat" /usr/share/icons/Faenza-Cupertino-mini/apps/48/hexchat.png hexchat --existing 
+prog "Links 2" /usr/share/pixmaps/links2.xpm xlinks2
+prog "Search Bar" /usr/local/share/icons/search-bar/eye-icon.png search-bar
+prog "Transmission" /usr/share/icons/Faenza-Cupertino-mini/apps/32/transmission.png transmission-gtk 
+prog "Wicd Network Manager" /usr/share/icons/hicolor/32x32/apps/wicd-gtk.png wicd-gtk --no-tray
+prog "wpa_gui" /usr/share/icons/hicolor/scalable/apps/wpa_gui.svg /usr/sbin/wpa_gui
+}
+menu "Jocuri" /usr/share/icons/Faenza-Cupertino-mini/categories/32/applications-games.png { 
+prog "DOSBox Emulator" /usr/share/icons/hicolor/32x32/apps/dosbox.png dosbox
+prog "Gweled" /usr/share/icons/Faenza-Cupertino-mini/apps/48/gweled.png gweled
+prog "Mahjongg" /usr/share/icons/Faenza-Cupertino-mini/apps/32/gnome-mahjongg.png gnome-mahjongg
+}
+menu "Programare" /usr/share/icons/Faenza-Cupertino-mini/categories/32/applications-development.png { 
+prog "Geany" /usr/share/icons/Faenza-Cupertino-mini/apps/32/geany.png geany 
+prog "Vim.tiny" /usr/share/icons/Faenza-Cupertino-mini/apps/32/vim.png desktop-defaults-run -t vim 
+}
+menu "Sunet și video" /usr/share/icons/Faenza-Cupertino-mini/categories/32/applications-multimedia.png { 
+prog "Alsamixer" /usr/share/pixmaps/alsamixer-equalizer.png x-terminal-emulator -e alsamixer
+prog "Alsamixer Equalizer" /usr/share/pixmaps/alsamixer-equalizer.png x-terminal-emulator -e alsamixer -D equalizer
+prog "Asunder CD Ripper" /usr/share/icons/asunder.png asunder 
+prog "GNOME MPV" /usr/share/icons/hicolor/scalable/apps/gnome-mpv.svg gnome-mpv 
+prog "guvcview" /usr/share/pixmaps/guvcview/guvcview.png guvcview
+prog "mps-youtube" /usr/share/icons/Faenza-Cupertino-mini/apps/32/terminal.png desktop-defaults-run -t mpsyt 
+prog "mpv Media Player" /usr/share/icons/hicolor/32x32/apps/mpv.png mpv --player-operation-mode=pseudo-gui -- 
+prog "Poor Man's Radio Player" /usr/share/icons/Faenza-Cupertino-mini/apps/32/library-internet-radio.png x-terminal-emulator -e pmrp
+prog "PulseAudio Volume Control" /usr/share/icons/Faenza-Cupertino-mini/apps/32/multimedia-volume-control.png pavucontrol
+prog "SMTube" /usr/share/icons/hicolor/32x32/apps/smtube.png smtube
+prog "Sound Card Chooser" /usr/share/pixmaps/soundcard.png alsa-set-default-card
+prog "Speaker Test" /usr/share/icons/Faenza-Cupertino-mini/apps/32/preferences-desktop-sound.png x-terminal-emulator -e speaker-test --channels 2 --test wav --nloops 3
+prog "Streamlight" /usr/share/pixmaps/streamlight-gui-launcher.png streamlight-gui-launcher.sh
+prog "streamtuner2" /usr/share/pixmaps/streamtuner2.png streamtuner2
+prog "WinFF" /usr/share/icons/hicolor/32x32/apps/winff.png winff 
+prog "xmms" /usr/share/icons/xmms.png xmms
+}
+menu "Unelte de sistem" /usr/share/icons/Faenza-Cupertino-mini/categories/32/applications-system.png { 
+prog "antix-live-kernel-updater.desktop" /usr/share/icons/Faenza-Cupertino-mini/devices/32/drive-removable-media-usb.png desktop-defaults-run -t sudo /usr/local/bin/live-kernel-updater --pause
+prog "Ajutor" /usr/share/icons/Faenza-Cupertino-mini/actions/32/help-contents.png dillo /usr/share/antiX/FAQ/index.html
+prog "Ajutor" /usr/share/icons/Faenza-Cupertino-mini/mimetypes/32/video.png dillo --fullwindow /usr/share/antiX/antix_help_videos.html
+prog "Boot Repair" /usr/share/pixmaps/bootrepair.png su-to-root -X -c bootrepair
+prog "Broadcom Manager" /usr/share/pixmaps/broadcom-manager.png su-to-root -X -c broadcom-manager
+prog "Choose Startup Services" /usr/share/icons/Faenza-Cupertino-mini/apps/32/gnome-settings-default-applications.png rc-conf-wrapper.sh
+prog "Command line apt-based package manager" /usr/share/icons/Faenza-Cupertino-mini/apps/32/system-software-install.png desktop-defaults-run -t sudo /usr/local/bin/cli-aptiX --pause
+prog "Control Centre" /usr/share/icons/Faenza-Cupertino-mini/categories/32/preferences-desktop.png antixcc.sh
+prog "Exit Desktop Session" /usr/share/icons/Faenza-Cupertino-mini/actions/32/application-exit.png desktop-session-exit
+prog "Firejail Tools" /usr/share/pixmaps/firetools.png firetools
+prog "GParted" /usr/share/icons/Faenza-Cupertino-mini/apps/32/gparted.png gksu gparted
+prog "Grsync" /usr/share/pixmaps/grsync.png /usr/bin/grsync -i 
+prog "GSmartControl" /usr/share/icons/hicolor/32x32/apps/gsmartcontrol.png su-to-root -X -c gsmartcontrol
+prog "Htop" /usr/share/icons/Faenza-Cupertino-mini/apps/32/htop.png desktop-defaults-run -t htop
+prog "IceWMcc" /usr/share/icons/Faenza-Cupertino-mini/categories/32/preferences-desktop.png /usr/local/bin/icewmcc/icewmcc.sh
+prog "Instalator Codecuri" /usr/share/pixmaps/codecs.png su-to-root -X -c codecs
+prog "Instalator Programe" /usr/share/pixmaps/packageinstaller.png su-to-root -X -c packageinstaller
+prog "ISO Snapshot" /usr/share/pixmaps/iso-snapshot.png gksu isosnapshot
+prog "Live USB Maker" /usr/share/icons/Faenza-Cupertino-mini/devices/32/drive-removable-media-usb.png su-to-root -X -c live-usb-maker-gui-antix
+prog "luckyBackup" /usr/share/pixmaps/luckybackup.png /usr/bin/luckybackup
+prog "luckyBackup administrator" /usr/share/pixmaps/luckybackup.png su-to-root -X -c /usr/bin/luckybackup
+prog "LXTerminal" /usr/share/icons/Faenza-Cupertino-mini/apps/32/lxterminal.png lxterminal
+prog "Midnight Commander" /usr/share/icons/hicolor/64x64/apps/MidnightCommander.png desktop-defaults-run -t mc
+prog "Mountbox" /usr/share/pixmaps/mountbox.png mountbox
+prog "Nvidia driver installer" /usr/share/pixmaps/nvidia-ddm-mx.png desktop-defaults-run -t su-to-root -c "/usr/local/bin/ddm-mx -i nvidia"
+prog "PC Information" /usr/share/icons/Faenza-Cupertino-mini/devices/32/computer.png inxi-gui
+prog "Repo Manager" /usr/share/pixmaps/repo-manager.png su-to-root -X -c repo-manager
+prog "Root Terminal" /usr/share/icons/Faenza-Cupertino-mini/apps/32/gksu-root-terminal.png gksu /usr/bin/x-terminal-emulator
+prog "ROX Filer" /usr/share/icons/antiX/rox-filer.png rox-filer
+prog "SpaceFM" /usr/share/icons/Faenza-Cupertino-mini/apps/48/spacefm.png spacefm 
+prog "Synaptic - administrator de pachete" /usr/share/icons/Faenza-Cupertino-mini/apps/32/synaptic.png gksu synaptic
+prog "Update Menu" /usr/share/icons/Faenza-Cupertino-mini/apps/32/update-manager.png desktop-menu --write-out-global
+}
+separator
+menu "Preferințe" /usr/share/icons/Faenza-Cupertino-mini/categories/32/preferences-desktop.png { 
+prog "Add Key" /usr/share/icons/Faenza-Cupertino-mini/apps/32/preferences-desktop-keyboard-shortcuts.png add-key
+prog "Add Menu Item" /usr/share/icons/Faenza-Cupertino-mini/categories/32/gnome-control-center.png add-desktop
+prog "Adobe Flash Player" /usr/share/icons/Faenza-Cupertino-mini/apps/32/flash-player-properties.png flash-player-properties
+prog "advert-block" /usr/share/pixmaps/advert-block.png gksu block-advert.sh
+prog "Alternatives Configurator" /usr/share/pixmaps/galternatives.png /usr/sbin/galternatives
+prog "ARandR" /usr/share/icons/Faenza-Cupertino-mini/devices/32/display.png arandr
+prog "Backlight Brightness" /usr/share/icons/Faenza-Cupertino-mini/devices/32/video-display.png desktop-defaults-run -t backlight-brightness --pause
+prog "Command line control centre" /usr/share/icons/Faenza-Cupertino-mini/categories/32/preferences-desktop.png desktop-defaults-run -t antiX-cli-cc
+prog "Conexiune ADSL/PPPOE" /usr/share/pixmaps/pppoeconf.xpm desktop-defaults-run -t /usr/sbin/pppoeconf
+prog "Configure automount" /usr/share/pixmaps/mountbox.png automount-config
+prog "Drivere pentru rețeaua fără fir pentru Windows" /usr/share/icons/hicolor/48x48/apps/ndisgtk.png su-to-root -X -c "/usr/sbin/ndisgtk"
+prog "Firewall Configuration" /usr/share/icons/hicolor/48x48/apps/gufw.png gufw
+prog "Manager Utilizator" /usr/share/icons/Faenza-Cupertino-mini/apps/32/config-users.png gksu user-management
+prog "Menu Manager" /usr/share/pixmaps/menu_manager.png sudo menu_manager.sh
+prog "Mouse Configuration" /usr/share/icons/Faenza-Cupertino-mini/devices/32/input-mouse.png ds-mouse
+prog "Personalizați desktopul" /usr/share/icons/Faenza-Cupertino-mini/apps/32/preferences-desktop-theme.png lxappearance
+prog "Print Settings" /usr/share/icons/Faenza-Cupertino-mini/devices/32/printer.png system-config-printer
+prog "Qt5 Settings" /usr/share/icons/Faenza-Cupertino-mini/apps/32/preferences-desktop-theme.png qt5ct
+prog "Remove Menu Item" /usr/share/icons/Faenza-Cupertino-mini/devices/48/computer.png remove-desktop
+prog "Set Font dpi" /usr/share/icons/Faenza-Cupertino-mini/apps/32/fonts.png set-dpi
+prog "Wallpaper" /usr/share/icons/Faenza-Cupertino-mini/apps/32/preferences-desktop-wallpaper.png wallpaper.py
+}
+

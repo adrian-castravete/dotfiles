@@ -1,0 +1,241 @@
+
+menu "Applications" folder {
+menu "Accessibility" folder {
+  prog "Xmag" - xmag
+  prog "Xzoom" - xzoom
+}
+menu "Data Management" folder {
+  prog "Innotop" -  xterm -T "Innotop" -e /usr/bin/innotop
+  prog "wmcliphist" - /usr/bin/wmcliphist
+}
+menu "Editors" folder {
+  prog "hexer" -  xterm -T "hexer" -e /usr/bin/hexer
+  prog "wmPinboard" - /usr/bin/wmpinboard
+  prog "wmstickynotes" - /usr/bin/wmstickynotes
+  prog "Xedit" - xedit
+}
+menu "Emulators" folder {
+  prog "Atari Emulator" - atari800
+  prog "VirtualBox" /usr/share/pixmaps/virtualbox.xpm /usr/bin/virtualbox
+  prog "ZSNES" /usr/share/pixmaps/zsnes.xpm /usr/bin/zsnes
+}
+menu "File Management" folder {
+  prog "ROX Filer" - /usr/bin/rox
+  prog "Xfdesktop" - xfdesktop
+}
+menu "Graphics" folder {
+  prog "gcolor2" /usr/share/pixmaps/gcolor2/gcolor2.xpm /usr/bin/gcolor2
+  prog "Xcircuit" /usr/share/pixmaps/xcircuit/xcircuit-icon.xpm /usr/bin/xcircuit
+  prog "X Window Snapshot" - xwd | xwud
+}
+menu "Network" folder {
+menu "Communication" folder {
+  prog "Irssi" -  xterm -T "Irssi" -e /usr/bin/irssi
+  prog "Pidgin" /usr/share/pixmaps/pidgin-menu.xpm /usr/bin/pidgin
+  prog "Telnet" -  xterm -T "Telnet" -e /usr/bin/telnet.netkit
+  prog "WMcoincoin" /usr/share/pixmaps/wmcoincoin.xpm /usr/bin/wmcoincoin
+  prog "Xbiff" - xbiff
+}
+menu "File Transfer" folder {
+  prog "Transmission BitTorrent Client (GTK)" /usr/share/pixmaps/transmission.xpm /usr/bin/transmission-gtk
+  prog "wmget" - /usr/bin/wmget dock
+}
+menu "Monitoring" folder {
+  prog "wmifinfo" - /usr/bin/wmifinfo
+  prog "wmnet" - /usr/bin/wmnet -l
+}
+menu "Web Browsing" folder {
+  prog "Google Chrome" /opt/google/chrome/product_logo_32.xpm /opt/google/chrome/google-chrome
+  prog "Opera" /usr/share/pixmaps/opera.xpm /usr/bin/opera
+  prog "w3m" -  xterm -T "w3m" -e /usr/bin/w3m /usr/share/doc/w3m/MANUAL.html
+}
+}
+menu "Programming" folder {
+  prog "Erlang Shell" /usr/share/pixmaps/erlang.xpm  xterm -T "Erlang Shell" -e /usr/bin/erl
+  prog "GDB" -  xterm -T "GDB" -e /usr/bin/gdb
+  prog "Jython" -  xterm -T "Jython" -e /usr/bin/jython
+  prog "MonoDevelop" /usr/share/icons/hicolor/scalable/apps/monodevelop.svg /usr/bin/monodevelop
+  prog "Tclsh8.6" -  xterm -T "Tclsh8.6" -e /usr/bin/tclsh8.6
+  prog "TkWish8.6" - x-terminal-emulator -e /usr/bin/wish8.6
+}
+menu "Project Management" folder {
+  prog "wmwork" - /usr/bin/wmwork
+}
+menu "Science" folder {
+menu "Electronics" folder {
+  prog "gschem" - /usr/bin/gschem
+  prog "logisim" - /usr/bin/logisim
+  prog "PCB (GTK+ interface)" /usr/share/pixmaps/pcb.xpm /usr/bin/pcb-gtk
+  prog "Xcircuit" /usr/share/pixmaps/xcircuit/xcircuit-icon.xpm /usr/bin/xcircuit
+}
+menu "Geoscience" folder {
+  prog "wmSun" - /usr/bin/wmsun
+  prog "wmweather+" - /usr/bin/wmweather+
+}
+menu "Mathematics" folder {
+  prog "Bc" -  xterm -T "Bc" -e /usr/bin/bc
+  prog "Dc" -  xterm -T "Dc" -e /usr/bin/dc
+  prog "galculator" /usr/share/pixmaps/galculator.xpm /usr/bin/galculator
+  prog "wmcalc" - /usr/bin/wmcalc
+  prog "Xcalc" - xcalc
+}
+}
+menu "Shells" folder {
+  prog "Bash" -  xterm -T "Bash" -e /bin/bash --login
+  prog "Dash" -  xterm -T "Dash" -e /bin/dash -i
+  prog "fish" -  xterm -T "fish" -e /usr/bin/fish
+  prog "Sh" -  xterm -T "Sh" -e /bin/sh --login
+  prog "Zsh" -  xterm -T "Zsh" -e /bin/zsh
+}
+menu "Sound" folder {
+  prog "LMMS" /usr/share/pixmaps/lmms.xpm /usr/bin/lmms
+  prog "Spek" /usr/share/pixmaps/spek.xpm /usr/bin/spek
+  prog "TiMidity++" /usr/share/pixmaps/timidity.xpm timidity -ia
+}
+menu "System" folder {
+menu "Administration" folder {
+  prog "Debian Task selector" -  xterm -T "Debian Task selector" -e su-to-root -c tasksel
+  prog "DSL/PPPoE configuration tool" /usr/share/pixmaps/pppoeconf.xpm  xterm -T "DSL/PPPoE configuration tool" -e /usr/sbin/pppoeconf
+  prog "Editres" - editres
+  prog "GTK+ 2.0 theme manager" /usr/share/pixmaps/gtk-chtheme.xpm /usr/bin/gtk-chtheme
+  prog "gtklp" - /usr/bin/gtklp
+  prog "gtklpq" - /usr/bin/gtklpq
+  prog "pppconfig" -  xterm -T "pppconfig" -e su-to-root -p root -c /usr/sbin/pppconfig
+  prog "wmcalclock" - /usr/bin/wmCalClock
+  prog "Wmclock" - /usr/bin/wmclock
+  prog "wmshutdown" - /usr/bin/wmshutdown
+  prog "Xclipboard" - xclipboard
+  prog "Xfce Application Finder" /usr/share/pixmaps/xfce4-appfinder.xpm xfce4-appfinder
+  prog "Xfontsel" - xfontsel
+  prog "Xkill" - xkill
+  prog "Xrefresh" - xrefresh
+}
+menu "Hardware" folder {
+  prog "Xvidtune" - xvidtune
+}
+menu "Monitoring" folder {
+  prog "Pstree" /usr/share/pixmaps/pstree16.xpm  xterm -T "Pstree" -e /usr/bin/pstree.x11
+  prog "Top" -  xterm -T "Top" -e /usr/bin/top
+  prog "wmbubble" - wmbubble 'x-terminal-emulator -e top' '/usr/share/wmbubble/wakwak.sh'
+  prog "wmclockmon" - /usr/bin/wmclockmon
+  prog "wmCPU" - /usr/bin/wmcpu
+  prog "wmcpuload" - /usr/bin/wmcpuload
+  prog "wmcube" - /usr/bin/wmcube
+  prog "wmdiskmon" - /usr/bin/wmdiskmon
+  prog "wmfire" - /usr/bin/wmfire
+  prog "wmmemload" - /usr/bin/wmmemload
+  prog "wmtemp" - /usr/bin/wmtemp
+  prog "wmtop" - /usr/bin/wmtop
+  prog "Xconsole" - xconsole -file /dev/xconsole
+  prog "Xev" - x-terminal-emulator -e xev
+  prog "Xload" - xload
+}
+menu "Package Management" folder {
+  prog "Aptitude Package Manager (text)" -  xterm -T "Aptitude Package Manager (text)" -e /usr/bin/aptitude-curses
+  prog "Synaptic Package Manager" /usr/share/synaptic/pixmaps/synaptic_32x32.xpm x-terminal-emulator -e synaptic-pkexec
+}
+  prog "wmwave" - /usr/bin/wmwave
+}
+menu "Terminal Emulators" folder {
+  prog "X-Terminal as root (GKsu)" /usr/share/pixmaps/gksu-debian.xpm /usr/bin/gksu -u root /usr/bin/x-terminal-emulator
+}
+menu "Text" folder {
+  prog "Fortune" - sh -c 'while /usr/games/fortune | col -x | xmessage -center -buttons OK:1,Another:0 -default OK -file - ; do :; done'
+}
+menu "Video" folder {
+  prog "Xplayer" /usr/share/pixmaps/xplayer.xpm /usr/bin/xplayer
+}
+menu "Viewers" folder {
+  prog "Mirage" /usr/share/pixmaps/mirage.xpm mirage
+  prog "Pix Image Viewer" /usr/share/pixmaps/pix.xpm /usr/bin/pix
+  prog "ViewPDF" - /usr/bin/ViewPDF
+  prog "wmsystemtray" - /usr/bin/wmsystemtray
+  prog "Xditview" - xditview
+  prog "Xviewer" /usr/share/pixmaps/gnome-xviewer.xpm /usr/bin/xviewer
+}
+}
+menu "Games" folder {
+menu "Action" folder {
+  prog "Alex the Allegator 4" /usr/share/pixmaps/alex4.xpm /usr/games/alex4
+  prog "Amphetamine" /usr/share/pixmaps/amph.xpm /usr/games/amph
+  prog "Epiphany" /usr/share/pixmaps/epiphany-game.xpm /usr/games/epiphany-game
+  prog "Gravity Wars" /usr/share/pixmaps/gravitywars.xpm /usr/games/gravitywars
+  prog "SDL-Ball" /usr/share/pixmaps/sdl-ball.xpm /usr/games/sdl-ball
+}
+menu "Adventure" folder {
+  prog "Flight of the Amazon Queen" /usr/share/pixmaps/flight-of-the-amazon-queen.xpm /usr/games/scummvm -p /usr/share/scummvm/flight-of-the-amazon-queen queen
+  prog "Frogatto" /usr/share/games/frogatto/frogatto.xpm /usr/games/frogatto
+  prog "gearhead2" -  xterm -T "gearhead2" -e /usr/games/gearhead2
+  prog "Gravitation" /usr/share/pixmaps/gravitation.xpm /usr/games/gravitation
+  prog "Zangband" /usr/share/pixmaps/zangband.xpm  xterm -T "Zangband" -e /usr/games/zangband
+}
+menu "Blocks" folder {
+  prog "Gem Drop X" /usr/share/pixmaps/gemdropx-icon.xpm /usr/games/gemdropx
+}
+menu "Board" folder {
+  prog "Atom-4 (text)" -  xterm -T "Atom-4 (text)" -e /usr/games/atom4 -a2 -mt
+  prog "Atom-4 (X11)" - /usr/games/atom4 -a2 -mx
+}
+menu "Puzzles" folder {
+  prog "GtkBalls" /usr/share/pixmaps/gtkballs_16x16.xpm gtkballs
+}
+menu "Simulation" folder {
+  prog "GTKPool" - /usr/games/gtkpool
+}
+menu "Tools" folder {
+  prog "fceux" - /usr/games/fceux
+}
+menu "Toys" folder {
+  prog "Cairo-Clock" cairo-clock.xpm /usr/bin/cairo-clock
+  prog "Oclock" - oclock
+  prog "Redshift" - redshift-gtk
+  prog "wmMatrix" /usr/share/icons/mini/wmMatrix.xpm /usr/bin/wmmatrix
+  prog "Xclock (analog)" - xclock -analog
+  prog "Xclock (digital)" - xclock -digital -update 1
+  prog "xdaliclock" - xdaliclock -cycle
+  prog "Xeyes" - xeyes
+  prog "xfishtank - start" - xfishtank
+  prog "xfishtank - stop" - killall -KILL xfishtank
+  prog "Xlogo" - xlogo
+  prog "Xmountains" - /usr/games/xmountains
+}
+}
+menu "Help" folder {
+  prog "Info" -  xterm -T "Info" -e info
+  prog "Xman" - xman
+}
+menu "Junior" folder {
+menu "Toys" folder {
+  prog "xfishtank - start" - xfishtank
+  prog "xfishtank - stop" - killall -KILL xfishtank
+}
+}
+menu "Screen" folder {
+menu "Locking" folder {
+  prog "Lock Screen (XScreenSaver)" - /usr/bin/xscreensaver-command -lock
+}
+menu "Saving" folder {
+  prog "Activate ScreenSaver (Next)" - /usr/bin/xscreensaver-command -next
+  prog "Activate ScreenSaver (Previous)" - /usr/bin/xscreensaver-command -prev
+  prog "Activate ScreenSaver (Random)" - /usr/bin/xscreensaver-command -activate
+  prog "Demo Screen Hacks" - /usr/bin/xscreensaver-command -demo
+  prog "Disable XScreenSaver" - /usr/bin/xscreensaver-command -exit
+  prog "Enable XScreenSaver" - /usr/bin/xscreensaver
+  prog "Reinitialize XScreenSaver" - /usr/bin/xscreensaver-command -restart
+  prog "ScreenSaver Preferences" - /usr/bin/xscreensaver-command -prefs
+}
+}
+menu "Window Managers" folder {
+  restart "aewm" - /usr/bin/aewm
+  restart "awesome" /usr/share/pixmaps/awesome.xpm /usr/bin/awesome
+  restart "CLFSWM" - clfswm
+  restart "Ctwm" - ctwm
+  restart "IceWM" /usr/share/icewm/icons/icewm_16x16.xpm /usr/bin/icewm
+  restart "Olvwm" - /usr/bin/olvwm
+  restart "Olwm" - /usr/bin/olwm
+  restart "TinyWM" - /usr/bin/tinywm
+  restart "VTWM" - vtwm
+  restart "w9wm" - /usr/bin/w9wm
+  restart "wm2" - /usr/bin/wm2
+  restart "XFwm" - xfwm4
+}

@@ -1,0 +1,7 @@
+key "Super+Enter" exo-open --launch TerminalEmulator
+key "Super+f" exo-open --launch FileManager
+key "Super+p" arandr
+key "Super+d" gmrun
+key "Ctrl+Shift+Escape" xfce4-taskmanager
+key "Print" xfce4-screenshooter
+key "XF86HomePage" exo-open --launch FileManager

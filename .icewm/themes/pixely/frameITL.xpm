@@ -1,0 +1,27 @@
+/* XPM */
+static char *frameITL[] = {
+/* columns rows colors chars-per-pixel */
+"16 16 5 1 ",
+"  c None",
+". c #4E4A4E",
+"X c #6DC2CA",
+"o c #8595A1",
+"O c #DEEED6",
+/* pixels */
+"    ............",
+"    ............",
+"  ..oooooooooooo",
+"  ..oooooooooooo",
+"..oooooooooooooo",
+"..oooooooooooooo",
+"..ooooXXOOOOOOOO",
+"..ooooXXOOOOOOOO",
+"..ooooOO        ",
+"..ooooOO        ",
+"..ooooOO        ",
+"..ooooOO        ",
+"..ooooOO        ",
+"..ooooOO        ",
+"..ooooOO        ",
+"..ooooOO        "
+};

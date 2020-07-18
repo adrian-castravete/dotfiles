@@ -1,0 +1,37 @@
+ThemeDescription="Simple-UI"
+ThemeAuthor="Adrian Castravete"
+Look=pixmap
+TitleBarHeight=16
+TitleButtonsSupported="xmi"
+TitleButtonsLeft="x"
+TitleButtonsRight="mi"
+TitleBarJustify=50
+
+TaskBarAtTop=1
+TaskBarClockLeds=0
+
+BorderSizeX=0
+BorderSizeY=0
+CornerSizeX=0
+CornerSizeY=0
+DlgBorderSizeX=0
+DlgBorderSizeY=0
+
+TitleFontNameXft="Linux Biolinum O:size=10:bold"
+MenuFontNameXft="Linux Biolinum O:size=8"
+StatusFontNameXft="Linux Biolinum O:size=12:bold"
+QuickSwitchFontNameXft="Linux Biolinum O:size=14:bold"
+NormalButtonFontNameXft="Linux Biolinum O:size=8"
+ActiveButtonFontNameXft="Linux Biolinum O:size=8"
+NormalTaskBarFontNameXft="Linux Biolinum O:size=10"
+ActiveTaskBarFontNameXft="Linux Biolinum O:size=10"
+MinimizedWindowFontNameXft="Linux Biolinum O:size=10"
+ListBoxFontNameXft="Linux Biolinum O:size=14:bold"
+ToolTipFontNameXft="Linux Biolinum O:size=10"
+ClockFontNameXft="Linux Biolinum O:size=16:bold"
+ApmFontNameXft="Linux Biolinum O:size=10"
+InputFontNameXft="Linux Biolinum O:size=10"
+LabelFontNameXft="Linux Biolinum O:size=10"
+
+ColorNormalTitleBarText="rgb:44/44/44"
+ColorActiveTitleBarText="rgb:00/00/00"

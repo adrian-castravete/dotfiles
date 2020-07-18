@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#oneko -tora -tofocus -position +0+3 -fg '#cc3311' -bg '#ffaa44'
+#icewmbg
+sh $HOME/.screenlayout/default.sh
+sh $HOME/.fehbg
+
+#compton -I 0.1 -O 0.05 -i 0.9 -e 0.9 -c -z -f &
+#if [[ -e "$HOME/.local/bin.local/compton" ]]; then
+#  sh "$HOME/.local/bin.local/compton"
+#else
+#  compton -I 0.1 -O 0.05 -e 0.9 -c -z -f &
+#fi
+pnmixer &
+redshift-gtk &
+xfsettingsd --replace &
+xfce4-power-manager &

@@ -1,0 +1,27 @@
+/* XPM */
+static char *titleAL[] = {
+/* columns rows colors chars-per-pixel */
+"2 16 5 1",
+"  c #000000",
+". c #7788EE",
+"o c #CCCCFF",
+"O c #4433CC",
+"x c #000000",
+/* pixels */
+"oo",
+"oO",
+"oO",
+"oO",
+"oO",
+"oO",
+"oO",
+"oO",
+"oO",
+"oO",
+"oO",
+"oO",
+"oO",
+"oO",
+"oO",
+"oO"
+};
