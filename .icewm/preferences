@@ -62,7 +62,7 @@ LogoutCommand=""
 ConfirmLogout=1 # Change to 0 if you add a logout command
 ShutdownCommand="sudo halt"
 RebootCommand="sudo reboot"
-LockCommand="light-locker-command --lock"
+LockCommand="lock"
 
 #  Task Bar Settings
 ####################
@@ -171,7 +171,7 @@ KeySysArrangeIcons=""
 KeySysMinimizeAll=""
 KeySysHideAll=""
 KeySysUndoArrange=""
-KeySysShowDesktop="Alt+Ctrl+d"
+KeySysShowDesktop=""
 KeySysCollapseTaskBar=""
 
 #
