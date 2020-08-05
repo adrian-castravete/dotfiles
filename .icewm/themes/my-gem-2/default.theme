@@ -15,15 +15,15 @@ CornerSizeY=16
 DlgBorderSizeX=8
 DlgBorderSizeY=8
 
-TitleFontNameXft="AtariST8x16SystemFont:size=12"
-MenuFontNameXft="AtariST8x16SystemFont:size=12"
-StatusFontNameXft="AtariST8x16SystemFont:size=12"
-QuickSwitchFontNameXft="AtariST8x16SystemFont:size=12"
-NormalTaskBarFontNameXft="AtariST8x16SystemFont:size=12"
-ActiveTaskBarFontNameXft="AtariST8x16SystemFont:size=12"
-ListBoxFontNameXft="AtariST8x16SystemFont:size=12"
-ToolTipFontNameXft="AtariST8x16SystemFont:size=12"
-ClockFontNameXft="AtariST8x16SystemFont:size=12"
+TitleFontNameXft="FixedsysExcelsior3.01:size=12"
+MenuFontNameXft="FixedsysExcelsior3.01:size=12"
+StatusFontNameXft="FixedsysExcelsior3.01:size=12"
+QuickSwitchFontNameXft="FixedsysExcelsior3.01:size=12"
+NormalTaskBarFontNameXft="FixedsysExcelsior3.01:size=12"
+ActiveTaskBarFontNameXft="FixedsysExcelsior3.01:size=12"
+ListBoxFontNameXft="FixedsysExcelsior3.01:size=12"
+ToolTipFontNameXft="FixedsysExcelsior3.01:size=12"
+ClockFontNameXft="FixedsysExcelsior3.01:size=12"
 
 ColorNormalBorder="rgb:00/00/00"
 ColorActiveBorder="rgb:00/00/00"

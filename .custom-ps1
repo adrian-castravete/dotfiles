@@ -53,4 +53,4 @@ function parse_git_dirty {
 }
 
 export PROMPT_COMMAND='fkbm_retval=$(nonzero_return)'
-export PS1='\[\e[91m\]\!:\j\[\e[m\] \[\e[93m\]\t\[\e[m\] \[\e[92;3m\]\u\[\e[m\]\[\e[96m\]@\[\e[94m\]\h\[\e[m\]\[\e[95m\]`parse_git_branch`\[\e[m\]$fkbm_retval `fancy-pwd -b`\n\[\e[1m\]\\$\[\e[m\] '
+export PS1='\[\e[31m\]\!:\j\[\e[m\] \[\e[33m\]\t\[\e[m\] \[\e[32;3m\]\u\[\e[m\]\[\e[36m\]@\[\e[34m\]\h\[\e[m\]\[\e[35m\]`parse_git_branch`\[\e[m\]$fkbm_retval `fancy-pwd -b`\n\[\e[1m\]\\$\[\e[m\] '
