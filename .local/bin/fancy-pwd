@@ -16,7 +16,7 @@ sub shortenDirName {
   while ($i <= length $name) {
     ($shortName = $name) =~ s/^(.{$i}).*/$1/;
     (my $ipath = $path) =~ s/~/$home/;
-    my $count = `find '$ipath/.' -maxdepth 1 -type d -name '$shortName*' | wc -l`;
+    my $count = `find '$ipath/.' -maxdepth 1 -type d -name '$shortName*' 2> /dev/null | wc -l`;
     chomp $count;
     if ($count == 1) {
       $i = length($name) + 1;
