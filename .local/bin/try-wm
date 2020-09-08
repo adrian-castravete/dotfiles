@@ -14,6 +14,8 @@ export PATH=$HOME/.local/bin.local:$HOME/.local/bin:$PATH
 sh $HOME/.xprofile
 xrdb -I$HOME .Xresources
 setxkbmap ro
-$*
+$* &
+x-terminal-emulator
+
 export DISPLAY=
 kill -KILL $XEPHYR_PID
