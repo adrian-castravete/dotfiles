@@ -3,4 +3,4 @@
 sudo apt install -y rxvt-unicode-256color vim-gtk sxhkd lxterminal \
 	suckless-tools xautolock lxtask xfce4-power-manager \
 	xfce4-screenshooter pcmanfm feh sxiv arandr pnmixer dunst p7zip-full \
-	file-roller lxappearance gpm
+	file-roller lxappearance gpm 
