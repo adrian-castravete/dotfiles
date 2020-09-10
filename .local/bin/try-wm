@@ -15,7 +15,7 @@ sh $HOME/.xprofile
 xrdb -I$HOME .Xresources
 setxkbmap ro
 $* &
-x-terminal-emulator
+xterm
 
 export DISPLAY=
 kill -KILL $XEPHYR_PID
