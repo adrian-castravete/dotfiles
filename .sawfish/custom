@@ -1,7 +1,9 @@
 ;; Sawfish user customization -- do not edit by hand!
 ;; Use the configurator instead.
-;; sawfish version 1.11.90, written Mon Sep 14 16:53:13 2020
+;; sawfish version 1.11.90, written Mon Sep 14 17:19:14 2020
 
+(custom-set-keymap (quote window-keymap) (quote (keymap (tab-raise-right-window . "H-ISO_Left_Tab") (maximize-window-toggle . "M-F10") (tab-raise-left-window . "W-ISO_Left_Tab") (raise-and-pass-through-click . "Button1-Click") (move-window-interactively . "W-Button1-Move") (popup-window-ops-menu . "W-Button2-Click") (raise-lower-window . "W-Button3-Click") (lower-window . "W-Down") (raise-window . "W-Up"))))
+(custom-set-keymap (quote maximize-button-keymap) (quote (keymap (maximize-window-toggle . "Button1-Off") (maximize-window-vertically-toggle . "Button2-Off") (maximize-window-horizontally-toggle . "Button3-Off"))))
 (custom-set-typed-variable (quote root-wallpaper) (quote "/home/fkbm/.sawfish/wallpaper.jpg") (quote image))
 (custom-set-typed-variable (quote default-frame-style) (quote Zami-like) (quote frame-style))
 (custom-set-typed-variable (quote opacity-enable) (quote ()) (quote boolean))
