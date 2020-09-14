@@ -1,11 +1,14 @@
 ;; Sawfish user customization -- do not edit by hand!
 ;; Use the configurator instead.
-;; sawfish version 1.11.90, written Mon Sep 14 17:19:14 2020
+;; sawfish version 1.11.90, written Tue Sep 15 00:27:58 2020
 
-(custom-set-keymap (quote window-keymap) (quote (keymap (tab-raise-right-window . "H-ISO_Left_Tab") (maximize-window-toggle . "M-F10") (tab-raise-left-window . "W-ISO_Left_Tab") (raise-and-pass-through-click . "Button1-Click") (move-window-interactively . "W-Button1-Move") (popup-window-ops-menu . "W-Button2-Click") (raise-lower-window . "W-Button3-Click") (lower-window . "W-Down") (raise-window . "W-Up"))))
+(custom-set-keymap (quote global-keymap) (quote (keymap (cycle-windows . "W-TAB") ((run-shell-command "pcmanfm") . "Super-f") (run-application . "Super-r") ((run-shell-command "x-terminal-emulator") . "Super-RET") ((browser "") . "Super-b") (show-desktop . "Super-d") ((activate-workspace 1) . "Super-1") ((activate-workspace 2) . "Super-2") ((activate-workspace 3) . "Super-3") ((activate-workspace 4) . "Super-4") ((send-to-workspace 1) . "Super-!") ((send-to-workspace 2) . "Super-@") ((send-to-workspace 3) . "Super-#") ((send-to-workspace 4) . "Super-$"))))
+(custom-set-keymap (quote window-keymap) (quote (keymap (tab-raise-right-window . "H-ISO_Left_Tab") (maximize-window-toggle . "M-F10") (tab-raise-left-window . "W-ISO_Left_Tab") (raise-and-pass-through-click . "Button1-Click") (move-window-interactively . "W-Button1-Move") (resize-window-interactively . "W-Button3-Move") (popup-window-ops-menu . "W-Button2-Click") (lower-window . "W-Down") (raise-window . "W-Up"))))
+(custom-set-typed-variable (quote default-frame-style) (quote Zami-like) (quote frame-style))
+(custom-set-typed-variable (quote audio-events-enabled) (quote t) (quote boolean) (quote sawfish.wm.ext.audio-events))
+(custom-set-keymap (quote title-keymap) (quote (keymap (move-window-interactively . "Button1-Move") (maximize-window-toggle . "Button1-Off2") (tab-tabgroup-add-to-tabgroup . "Button2-C-Off") (tab-window-add-to-tabgroup . "Button2-Off") (resize-window-interactively . "Button2-Move") (tab-release-window . "Button3-Click") (move-window-interactively . "Button3-Move") (raise-lower-window . "Button3-Off"))))
 (custom-set-keymap (quote maximize-button-keymap) (quote (keymap (maximize-window-toggle . "Button1-Off") (maximize-window-vertically-toggle . "Button2-Off") (maximize-window-horizontally-toggle . "Button3-Off"))))
 (custom-set-typed-variable (quote root-wallpaper) (quote "/home/fkbm/.sawfish/wallpaper.jpg") (quote image))
-(custom-set-typed-variable (quote default-frame-style) (quote Zami-like) (quote frame-style))
 (custom-set-typed-variable (quote opacity-enable) (quote ()) (quote boolean))
 (custom-set-typed-variable (quote shadows-enable) (quote t) (quote boolean))
 (custom-set-typed-variable (quote lockdown-command) (quote "lock") (quote string))
@@ -17,7 +20,6 @@
 (custom-set-typed-variable (quote filemanager-program) (quote "pcmanfm") (quote string))
 (custom-set-typed-variable (quote xterm-program) (quote "x-terminal-emulator") (quote string))
 (custom-set-typed-variable (quote browser-program) (quote "x-www-browser") (quote string))
-(custom-set-keymap (quote global-keymap) (quote (keymap (cycle-windows . "W-TAB") ((run-shell-command "x-terminal-emulator") . "Super-RET") ((browser "") . "Super-b") (show-desktop . "Super-d") ((activate-workspace 1) . "Super-1") ((activate-workspace 2) . "Super-2") ((activate-workspace 3) . "Super-3") ((activate-workspace 4) . "Super-4") ((send-to-workspace 1) . "Super-!") ((send-to-workspace 2) . "Super-@") ((send-to-workspace 3) . "Super-#") ((send-to-workspace 4) . "Super-$"))))
 (custom-set-typed-variable (quote viewport-boundary-mode) (quote stop) (quote (choice wrap-around stop dynamic)))
 (custom-set-typed-variable (quote viewport-dimensions) (quote (1 . 1)) (quote (pair (number 1) (number 1))))
 (custom-set-typed-variable (quote scroll-viewport-steps) (quote 1) (quote (range (1 . 50))))
