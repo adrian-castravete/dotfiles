@@ -1,0 +1,13 @@
+#!/usr/bin/env perl
+
+if (`ps -e` !~ /\bemacs\b/) {
+  if (`which emacs`) {
+    `emacs --daemon`;
+    print "Started emacs daemon.";
+  } else {
+    `notify-send -u critical --icon=error "Error" "Emacs not found!"`;
+    die "Emacs not found!\n";
+  }
+}
+print "Launching emacs client...";
+exec emacsclient -t $ARGV;
