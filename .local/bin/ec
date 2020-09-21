@@ -9,5 +9,5 @@ if (`ps -e` !~ /\bemacs\b/) {
     die "Emacs not found!\n";
   }
 }
-print "Launching emacs client...";
-exec emacsclient -t $ARGV;
+print "Launching emacs client...\n";
+exec "emacsclient -t -c $ARGV";
