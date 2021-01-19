@@ -102,3 +102,5 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH="~/.local/bin:~/.local/bin.local:$PATH"
 export RPS1="$RPS1 $(random_emoji)%"
+
+source ~/.aliases
