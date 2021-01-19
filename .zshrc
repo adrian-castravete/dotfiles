@@ -99,3 +99,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+export PATH="~/.local/bin:~/.local/bin.local:$PATH"
+export RPS1="$RPS1 $(random_emoji)%"
