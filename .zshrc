@@ -1,8 +1,16 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Automatically install oh-my-zsh if it doesn't exist.
+if [[ ! -d "$HOME/.oh-my-zsh" ]]
+then
+	mkdir -p "$HOME/.oh-my-zsh.new" && \
+	git clone git@github.com:ohmyzsh/ohmyzsh $HOME/.oh-my-zsh.new && \
+	mv "$HOME/.oh-my-zsh.new" "$HOME/.oh-my-zsh"
+fi
+
 # Path to your oh-my-zsh installation.
-export ZSH="/home/fkbm/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -100,7 +108,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PATH="~/.local/bin:~/.local/bin.local:$PATH"
+export PATH="$HOME/.local/bin:$HOME/.local/bin.local:$PATH"
 export RPS1="$RPS1 $(random_emoji)%"
 
-source ~/.aliases
+source "$HOME/.aliases"
