@@ -9,8 +9,8 @@ then
 	mv "$HOME/.oh-my-zsh.new" "$HOME/.oh-my-zsh"
 fi
 
-[ -s "$HOME/.zshrc.pre" ] && source "$HOME/.zshrc.pre"
-[ -s "$HOME/.fzf.zsh" ] && source "$HOME/.fzf.zsh"
+[ -s "$HOME/.zshrc.pre" ] && source "$HOME/.zshrc.pre" || true
+[ -s "$HOME/.fzf.zsh" ] && source "$HOME/.fzf.zsh" || true
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -117,6 +117,8 @@ export RPS1="$RPS1 $(random_emoji)%"
 source "$HOME/.aliases"
 
 export NVM_DIR="$HOME/.config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"  # This loads nvm
 
-[ -s "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"
+[ -s "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local" || true
+
+. $HOME/.shellrc.load

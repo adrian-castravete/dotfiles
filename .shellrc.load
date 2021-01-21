@@ -1,13 +1,8 @@
 #!/bin/bash
 
 export DFM_REPO=$HOME/.dotfiles
-source $HOME/.custom-ps1
 if [ -e $HOME/.aliases ]
 then
 	source $HOME/.aliases
-fi
-if [ -e $HOME/.urxvt-font-rc.sh ]
-then
-	source $HOME/.urxvt-font-rc.sh
 fi
 source $HOME/.profile
