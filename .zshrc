@@ -115,3 +115,5 @@ source "$HOME/.aliases"
 
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+[ -s "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"
