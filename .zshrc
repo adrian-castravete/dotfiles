@@ -78,7 +78,7 @@ ZSH_THEME="af-magic"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git virtualenvwrapper zsh-interactive-cd docker docker-compose colorize vi-mode emoji emoji-clock emotty)
+plugins=(git virtualenvwrapper zsh-interactive-cd docker docker-compose colorize vi-mode emoji emoji-clock emotty fzf nvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -112,3 +112,6 @@ export PATH="$HOME/.local/bin:$HOME/.local/bin.local:$PATH"
 export RPS1="$RPS1 $(random_emoji)%"
 
 source "$HOME/.aliases"
+
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
