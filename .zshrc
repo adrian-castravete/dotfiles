@@ -9,6 +9,9 @@ then
 	mv "$HOME/.oh-my-zsh.new" "$HOME/.oh-my-zsh"
 fi
 
+[ -s "$HOME/.zshrc.pre" ] && source "$HOME/.zshrc.pre"
+[ -s "$HOME/.fzf.zsh" ] && source "$HOME/.fzf.zsh"
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -78,7 +81,7 @@ ZSH_THEME="af-magic"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git virtualenvwrapper zsh-interactive-cd docker docker-compose colorize vi-mode emoji emoji-clock emotty fzf nvm)
+plugins=(git virtualenvwrapper docker docker-compose colorize vi-mode emoji emoji-clock emotty fzf zsh-interactive-cd nvm)
 
 source $ZSH/oh-my-zsh.sh
 
