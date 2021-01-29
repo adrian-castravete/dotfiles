@@ -1,0 +1,12 @@
+#!/usr/bin/env lua5.3
+
+local cmd = os.execute
+local text = ...
+
+if text then
+  for item in text:gmatch("[^%s]+") do
+    print(item)
+  end
+else
+  cmd("gmrun")
+end

@@ -16,13 +16,13 @@ CornerSizeY=24
 ScrollBarX=15
 ScrollBarY=15
 
-TitleFontNameXft="FreeSans:size=12:bold"
-MenuFontNameXft="FreeSans:size=10"
-NormalButtonFontNameXft="FreeSans:size=10:bold"
-ActiveButtonFontNameXft="FreeSans:size=10:bold"
-NormalTaskBarFontNameXft="FreeSans:size=10:bold"
-ActiveTaskBarFontNameXft="FreeSans:size=10:bold"
-StatusFontNameXft="FreeSans:size=10"
+TitleFontNameXft="NotoSans:size=10:bold"
+MenuFontNameXft="NotoSans:size=8"
+NormalButtonFontNameXft="NotoSans:size=8:bold"
+ActiveButtonFontNameXft="NotoSans:size=8:bold"
+NormalTaskBarFontNameXft="NotoSans:size=8:bold"
+ActiveTaskBarFontNameXft="NotoSans:size=8:bold"
+StatusFontNameXft="NotoSans:size=8"
 
 ColorDialog="rgb:f8/f8/f0"
 ColorNormalBorder="rgb:00/00/00"

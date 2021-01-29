@@ -1,15 +1,14 @@
 prog "Terminal" terminal exo-open --launch TerminalEmulator
-prog "Editor" text-editor exo-open --launch TerminalEmulator vim
+prog "Editor" text-editor exo-open --launch TerminalEmulator nvim
 separator
 prog "File Manager" file-manager exo-open --launch FileManager
-prog "Midnight Commander" mc exo-open --launch TerminalEmulator mc
+prog "Midnight Commander" mc exo-open --launch FileManager mc
 separator
 prog "Web Browser" web-browser exo-open --launch WebBrowser
 separator
+menuprog "Applications" applications-accessories icewm-menu-fdo
 #menufile "Personal" config-users personal
-#menufile "Applications" applications-accessories menu-applications
-menufile "Programs" applications-accessories programs
-prog "Update Menu" update-manager update-menus
+#menufile "Programs" applications-accessories programs
 separator
-prog "App Killer" gtk-no xkill
+prog "App Killer" stop xkill
 prog "Control Centre" preferences-desktop xfce4-settings-manager
