@@ -64,7 +64,7 @@ LockCommand="lock"
 #  Task Bar Settings
 ####################
 ShowTaskBar=1
-TaskBarAtTop=1
+TaskBarAtTop=0
 TaskBarKeepBelow=1
 TaskBarAutoHide=0
 EnableAddressBar=0
@@ -189,3 +189,5 @@ SupportSemitransparency=1 # 0/1
 
 #  Desktop background scaled to full screen
 DesktopBackgroundScaled=1 # 0/1
+
+Alpha=1

@@ -21,5 +21,5 @@ setxkbmap ro
 # }}}
 
 # Sawfish WM {{{
-exec dbus-launch --exit-with-session sawfish-xfce-session > $HOME/.sawfish.out 2> $HOME/.sawfish.err
+exec dbus-launch --exit-with-session icewm-session > $HOME/.icewm.out 2> $HOME/.icewm.err
 # }}}
