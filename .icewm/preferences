@@ -179,7 +179,7 @@ MenuMouseTracking=1 # 0/1
 QuickSwitchToAllWorkspaces=1 # 0/1
 
 #  Alt+Tab: group windows on current workspace
-# QuickSwitchGroupWorkspaces=1 # 0/1
+QuickSwitchGroupWorkspaces=1 # 0/1
 
 #  Show all reachable icons when quick switching
 # QuickSwitchAllIcons=1 # 0/1
@@ -194,7 +194,7 @@ QuickSwitchSmallWindow=1 # 0/1
 # QuickSwitchMaxWidth=0 # 0/1
 
 #  Place the icons and titles vertical instead of horizontal
-# QuickSwitchVertical=1 # 0/1
+QuickSwitchVertical=0 # 0/1
 
 #  Show the huge (48x48) of the window icon for the active window
 QuickSwitchHugeIcon=1 # 0/1
@@ -341,7 +341,7 @@ TaskBarShowCollapseButton=1 # 0/1
 TaskBarWorkspacesLimit="2"
 
 #  Enable mouse wheel cycling over workspaces and task buttons in taskbar
-# TaskBarUseMouseWheel=1 # 0/1
+TaskBarUseMouseWheel=0 # 0/1
 
 #  Show a mini desktop preview on each workspace button
 PagerShowPreview=1 # 0/1
@@ -548,7 +548,7 @@ TaskBarJustify="right"
 # TaskBarApmGraphWidth=10 # [1-1000]
 
 #  Height of taskbar monitoring applets
-TaskBarGraphHeight=60 # [16-1000]
+TaskBarGraphHeight=30 # [16-1000]
 
 #  Primary screen for xinerama where taskbar is shown
 # XineramaPrimaryScreen=0 # [0-63]
@@ -856,10 +856,10 @@ WorkspaceNames=" 1 ", " 2 "
 # TaskbuttonIconOffset=0 # [0-16]
 
 #  Maximum scaled width of tray icons
-TrayIconMaxWidth=64 # [16-128]
+TrayIconMaxWidth=32 # [16-128]
 
 #  Maximum scaled height of tray icons
-TrayIconMaxHeight=64 # [16-128]
+TrayIconMaxHeight=32 # [16-128]
 
 #  Surround the tray with plastic border
 # TrayDrawBevel=0 # 0/1
@@ -919,10 +919,10 @@ TrayIconMaxHeight=64 # [16-128]
 # MenuIconSize=16 # [8-128]
 
 #  Dimension of the small icons
-SmallIconSize=64 # [8-128]
+SmallIconSize=32 # [8-128]
 
 #  Dimension of the large icons
-LargeIconSize=64 # [8-128]
+LargeIconSize=48 # [8-128]
 
 #  Dimension of the large icons
 HugeIconSize=64 # [8-128]
@@ -1045,7 +1045,7 @@ HugeIconSize=64 # [8-128]
 # ClockFontName="-*-monospace-medium-r-*-*-*-140-*-*-*-*-*-*"
 
 #  Name of the task bar clock font.
-ClockFontNameXft="sans:size=36"
+ClockFontNameXft="sans:size=24"
 
 #  Name of the task bar temperature font.
 # TempFontName="-*-monospace-medium-r-*-*-*-140-*-*-*-*-*-*"
