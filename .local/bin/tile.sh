@@ -7,7 +7,7 @@ FULLH="$(cut -d'x' -f2 <<< $CURRES)"
 
 # taskbar pixel height
 DIFFW=8
-DIFFH=52 # hardcoded
+DIFFH=60 # hardcoded
 
 # active window id
 # ID="-r :ACTIVE:" # does not work as consistently as the call to xdotool
