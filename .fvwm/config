@@ -29,10 +29,12 @@
 #
 # The following is used in various menus and also sets the terminal
 # that FvwmConsole uses. Change this to your terminal of choice
-InfoStoreAdd terminal "exo-open --launch TerminalEmulator"
+InfoStoreAdd terminal x-terminal-emulator
 
 # This is used for "Run Command" and the Meta+Space key-binding
 InfoStoreAdd runcmd gmrun
+
+ImagePath $[FVWM_USERDIR]/images:+
 
 ###########
 # 1: Functions
@@ -58,10 +60,10 @@ InfoStoreAdd runcmd gmrun
 # actions that are run after a restart.
 DestroyFunc StartFunction
 AddToFunc   StartFunction
-+ I Test (Init, f $[FVWM_USERDIR]/.BGdefault) \
-    Exec exec fvwm-root $[FVWM_USERDIR]/.BGdefault
-+ I TestRc (NoMatch) Exec exec fvwm-root \
-    $[FVWM_DATADIR]/default-config/images/background/bg1.png
++ I Test (Init, x $[FVWM_USERDIR]/start-once.sh) \
+    Exec exec $[FVWM_USERDIR]/start-once.sh
++ I Test (x $[FVWM_USERDIR]/start.sh) \
+    Exec exec $[FVWM_USERDIR]/start.sh
 + I Module FvwmButtons RightPanel
 + I Module FvwmEvent EventNewDesk
 
@@ -97,17 +99,17 @@ AddToFunc   ViewManPage
 # image and configure it to be loaded the next time fvwm is run.
 # Note, fvwm-root can't use .jpeg or resize images. Use something
 # like display, feh, etc.
-DestroyFunc SetBG
-AddToFunc   SetBG
-+ I Test (f $[FVWM_USERDIR]/images/background/$0) \
-    Exec exec fvwm-root $[FVWM_USERDIR]/images/background/$0
-+ I TestRc (Match) Exec exec ln -fs images/background/$0 \
-    $[FVWM_USERDIR]/.BGdefault
-+ I TestRc (Match) Break
-+ I Test (!f $[FVWM_DATADIR]/default-config/images/background/$0) Break
-+ I Exec exec fvwm-root $[FVWM_DATADIR]/default-config/images/background/$0
-+ I Exec exec ln -fs $[FVWM_DATADIR]/default-config/images/background/$0 \
-    $[FVWM_USERDIR]/.BGdefault
+#DestroyFunc SetBG
+#AddToFunc   SetBG
+#+ I Test (f $[FVWM_USERDIR]/images/background/$0) \
+#    Exec exec fvwm-root $[FVWM_USERDIR]/images/background/$0
+#+ I TestRc (Match) Exec exec ln -fs images/background/$0 \
+#    $[FVWM_USERDIR]/.BGdefault
+#+ I TestRc (Match) Break
+#+ I Test (!f $[FVWM_DATADIR]/default-config/images/background/$0) Break
+#+ I Exec exec fvwm-root $[FVWM_DATADIR]/default-config/images/background/$0
+#+ I Exec exec ln -fs $[FVWM_DATADIR]/default-config/images/background/$0 \
+#    $[FVWM_USERDIR]/.BGdefault
 
 
 # Function: IconManClick
@@ -173,8 +175,10 @@ DesktopSize 2x2
 # for how long the mouse as at the edge before it scrolls.
 #
 # Set EdgeScroll 0 0 and/or EdgeResistance -1 to disable.
-EdgeScroll 100 100
-EdgeResistance 450
+#EdgeScroll 100 100
+#EdgeResistance 450
+EdgeScroll 0 0
+EdgeResistance -1
 EdgeThickness 1
 Style * EdgeMoveDelay 350, EdgeMoveResistance 350
 
@@ -185,7 +189,7 @@ EwmhBaseStruts 0 120 0 0
 
 # This sets the ClickTime and MoveThreshold used to determine
 # Double Clicks, Hold and Move for the mouse.
-ClickTime 250
+ClickTime 750
 MoveThreshold 3
 
 # Sets the focus style to ClickToFocus and a mouse click
@@ -193,7 +197,7 @@ MoveThreshold 3
 Style * ClickToFocus, MouseFocusClickRaises
 
 # Default Font
-DefaultFont "xft:Noto Sans:size=9:antialias=True"
+DefaultFont "xft:Noto Sans:size=9:Bold:antialias=True"
 
 # Window Placement
 Style * MinOverlapPlacement, GrabFocus, !UsePPosition
@@ -214,14 +218,11 @@ Style * !FPGrabFocusTransient, FPReleaseFocusTransient
 # See http://fvwm.org/documentation/faq/#why-do-numlock-capslock-and-scrolllock-interfere-with-clicktofocus-andor-my-mouse-bindings
 IgnoreModifiers L25
 
-# Decor Styles
-Style * BorderWidth 5, HandleWidth 5, FvwmBorder, FirmBorder
-Style * Colorset 1, HilightColorset 2
-Style * BorderColorset 3, HilightBorderColorset 4
-
 # Disable Icons from appearing on desktop.
 # Comment this out or use Style * Icon to get the icons back.
 Style * Icon
+
+Style FvwmIcon Shape
 
 # Window Specific Styles
 Style RightPanel !Title, !Borders, !Handles, Sticky, \
@@ -255,7 +256,6 @@ Style gmrun GrabFocus
 #      13 - FvwmPager Active Page
 #      14 - FvwmIconMan Iconified Button
 ###########
-# Art-Deco theme (Blue)
 Colorset 0  fg #ffffff, bg #2b4e5e, hi, sh, Plain, NoShape
 Colorset 1  fg #000000, bg #88b2b1, hi, sh, Plain, NoShape
 Colorset 2  fg #ffffff, bg #2b4e5e, hi, sh, Plain, NoShape
@@ -280,25 +280,33 @@ MenuStyle * TrianglesSolid, TrianglesUseFore
 MenuStyle * ItemFormat "%|%3.1i%5.3l%5.3>%|"
 MenuStyle * Font "xft:Noto Sans:Bold:size=8:antialias=True"
 
+# PreSettings Menu
+DestroyMenu PreSettingsMenu
+AddToMenu   PreSettingsMenu "Fvwm Settings" Title
+#+ "&Wallpapers%icons/wallpaper.png%" Popup BGMenu
+#+ "M&an Pages%icons/help.png%" Popup MenuFvwmManPages
+#+ "Copy Config%icons/conf.png%" FvwmScript FvwmScript-ConfirmCopyConfig
++ "Fvwm&Console%icons/terminal.png%" Module FvwmConsole -terminal $[infostore.terminal]
+#+ "" Nop
++ "Re&fresh%icons/refresh.png%" Refresh
++ "&Restart%icons/restart.png%" Restart
++ "All &Settings%icons/preferences-other.png%" Popup SettingsMenu
+
 # Root Menu
 #
 # The root menu will PopUp with a click in the root
 # window or using alt-f1 (or menu).
 DestroyMenu MenuFvwmRoot
 AddToMenu   MenuFvwmRoot "Fvwm" Title
+Test (x $[infostore.runcmd]) + "Run command" Exec exec $[infostore.runcmd]
++ "&Terminal Emulator%icons/terminal.png%" Exec exec $[infostore.terminal]
++ "&File Manager%icons/file-manager.png%" Exec exec exo-open --launch FileManager
++ "" Nop
 + "&Programs%icons/programs.png%" Popup MenuPrograms
 + "XDG &Menu%icons/apps.png%" Popup XDGMenu
-+ "&XTerm%icons/terminal.png%" Exec exec $[infostore.terminal]
-Test (x dmenu_run) + "Run command" Exec exec $[infostore.runcmd]
 + "" Nop
-+ "Fvwm&Console%icons/terminal.png%" Module FvwmConsole -terminal $[infostore.terminal]
-+ "&Wallpapers%icons/wallpaper.png%" Popup BGMenu
-+ "M&an Pages%icons/help.png%" Popup MenuFvwmManPages
-+ "Copy Config%icons/conf.png%" FvwmScript FvwmScript-ConfirmCopyConfig
-+ "" Nop
-+ "Re&fresh%icons/refresh.png%" Refresh
-+ "&Restart%icons/restart.png%" Restart
-+ "&Quit%icons/quit.png%" Module FvwmScript FvwmScript-ConfirmQuit
++ "&Settings%icons/preferences-system.png%" Popup PreSettingsMenu
++ "&Logout%icons/quit.png%" Module FvwmScript FvwmScript-ConfirmQuit
 
 # Generate XDGMenu
 PipeRead "fvwm-menu-desktop -e"
@@ -312,21 +320,23 @@ DestroyMenu MenuPrograms
 AddToMenu   MenuPrograms "Programs" Title
 Test (x chromium) + "Chromium" Exec exec chromium
 Test (x firefox) + "Firefox" Exec exec firefox
-Test (x google-chrome) + "Google-Chrome" Exec exec google-chrome
-Test (x gvim) + "gVim" Exec exec gvim
-Test (x emacs) + "Emacs" Exec exec emacs
-Test (x gimp) + "Gimp" Exec exec gimp
+Test (x google-chrome) + "Google Chrome" Exec exec google-chrome
+Test (x nvim) + "NeoVim" Exec exec $[infostore.terminal] -e nvim
+Test (x code) + "Visual Studio Code" Exec exec code
+Test (x grafx2) + "GrafX2" Exec exec grafx2
+Test (x gimp) + "GIMP" Exec exec gimp
 Test (x vlc) + "VLC" Exec exec vlc
+Test (x bc) + "BC (calculator)" Exec exec $[infostore.terminal] -e bc
 
 # Background Menu
 #
 # Backgrounds are located in ~/.fvwm/images/background/
 # Menu icons are located in ~/.fvwm/images/bgicons/
-DestroyMenu BGMenu
-AddToMenu   BGMenu "Wallpapers" Title
-+ "Floral%bgicons/bg1.png%" SetBG bg1.png
-+ "Circles%bgicons/bg2.png%" SetBG bg2.png
-+ "Space%bgicons/bg3.png%" SetBG bg3.png
+#DestroyMenu BGMenu
+#AddToMenu   BGMenu "Wallpapers" Title
+#+ "Floral%bgicons/bg1.png%" SetBG bg1.png
+#+ "Circles%bgicons/bg2.png%" SetBG bg2.png
+#+ "Space%bgicons/bg3.png%" SetBG bg3.png
 
 # Window Operations Menus
 DestroyMenu MenuWindowOps
@@ -335,7 +345,9 @@ AddToMenu   MenuWindowOps
 + "Resize"    Resize
 + "Iconify"   Iconify
 + "Maximize"  Maximize
-+ "Shade"     WindowShade
++ "Maximize Left%icons/win/maxleft.png%" ResizeMoveMaximize frame 50wa 100 0 0
++ "Maximize Right%icons/win/maxright.png%" ResizeMoveMaximize frame 50wa 100 100wa 0
+#+ "Shade"     WindowShade
 + "Stick"     Stick
 + "" Nop
 + "Close"     Close
@@ -347,6 +359,8 @@ AddToMenu   MenuWindowOpsLong
 + "Resize%icons/win/resize.png%" Resize
 + "(De)Iconify%icons/win/iconify.png%" Iconify
 + "(Un)Maximize%icons/win/max.png%" Maximize
++ "Maximize Left%icons/win/maxleft.png%" ResizeMoveMaximize frame 50wa 100 0 0
++ "Maximize Right%icons/win/maxright.png%" ResizeMoveMaximize frame 50wa 100 100wa 0
 + "(Un)Shade%icons/win/shade.png%" WindowShade
 + "(Un)Sticky%icons/win/sticky.png%" Stick
 + "(No)Title Bar%icons/win/title.png%" Pick (CirculateHit) ToggleTitle
@@ -458,17 +472,20 @@ AddToMenu   MenuFvwmManPages "Help" Title
 #
 # Silent supresses any errors (such as keyboards with no Menu key).
 Silent Key F1 A M Menu MenuFvwmRoot
-Silent Key Menu A A Menu MenuFvwmRoot
+Silent Key Menu A M Menu MenuFvwmRoot
 Silent Key Tab A M WindowList Root c c CurrentAtEnd, SelectOnRelease Meta_L
 Silent Key F1 A C GotoDesk 0 0
 Silent Key F2 A C GotoDesk 0 1
 Silent Key F3 A C GotoDesk 0 2
 Silent Key F4 A C GotoDesk 0 3
-Silent Key Return A M Exec exec $[infostore.terminal]
-Silent Key space A M Exec exec $[infostore.runcmd] 
 Silent Key F2 A M ResizeMoveMaximize frame 50wa 100 0 0
 Silent Key F3 A M ResizeMoveMaximize frame 50wa 100 100wa 0
+Silent Key F4 A M Delete
 Silent Key F10 A M Maximize 100 100
+Silent Key Return A M Exec exec $[infostore.terminal]
+Silent Key space A M Exec exec $[infostore.runcmd] 
+Silent Key e A SM Exec exec exo-open --launch FileManager
+Silent Key i A SM Exec exec exo-open --launch WebBrowser
 
 # Window Buttons: [1 3 5 7 9  TTTTT  0 8 6 4 2]
 #   1 - Open the WindowOps menu.
@@ -518,6 +535,10 @@ ButtonStyle 2 Clear MwmDecorMax
 ButtonStyle 4 Clear MwmDecorMin
 Style * UseDecor MyDecor
 
+# Decor Styles
+Style * BorderWidth 5, HandleWidth 5, FvwmBorder, FirmBorder
+Style * Colorset 1, HilightColorset 2
+Style * BorderColorset 3, HilightBorderColorset 4
 
 ############
 # 7: Modules
@@ -529,7 +550,7 @@ Style * UseDecor MyDecor
 # a window. One use is getting the class/resource/name of a window.
 DestroyModuleConfig FvwmIdent:*
 *FvwmIdent: Colorset 10
-*FvwmIdent: Font "xft:Sans:size=10:antialias=True"
+*FvwmIdent: Font "xft:Noto Sans:size=10:antialias=True"
 
 # FvwmScript
 #
@@ -556,7 +577,7 @@ DestroyModuleConfig RightPanel:*
 *RightPanel: Rows $[vp.height]
 *RightPanel: Columns 120
 *RightPanel: Frame 0
-*RightPanel: Font "xft:Sans:Bold:size=10:antialias=True"
+*RightPanel: Font "xft:Noto Sans:Bold:size=10:antialias=True"
 *RightPanel: (120x45, Icon "fvwm-logo-small.png", Frame 0)
 *RightPanel: (120x5, Frame 0)
 *RightPanel: (10x20, Frame 0)
@@ -591,7 +612,7 @@ DestroyModuleConfig FvwmPager:*
 *FvwmPager: WindowColorsets 10 11
 *FvwmPager: Font None
 *FvwmPager: Balloons All
-*FvwmPager: BalloonFont "xft:Sans:Bold:size=8:antialias=True"
+*FvwmPager: BalloonFont "xft:Noto Sans:Bold:size=8:antialias=True"
 *FvwmPager: BallonYOffset +2
 *FvwmPager: Window3dBorders
 *FvwmPager: MiniIcons
@@ -613,7 +634,7 @@ DestroyModuleConfig FvwmIconMan:*
 *FvwmIconMan: DrawIcons always
 *FvwmIconMan: ReliefThickness 0
 *FvwmIconMan: Format "%t"
-*FvwmIconMan: Font "xft:Sans:Bold:size=8:antialias=True"
+*FvwmIconMan: Font "xft:Noto Sans:Bold:size=8:antialias=True"
 *FvwmIconMan: Action Mouse 0 A ret
 *FvwmIconMan: Action Mouse 1 A sendcommand IconManClick
 *FvwmIconMan: Action Mouse 3 A sendcommand "Menu MenuIconOps"
