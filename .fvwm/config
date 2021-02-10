@@ -466,8 +466,8 @@ Silent Key F3 A C GotoDesk 0 2
 Silent Key F4 A C GotoDesk 0 3
 Silent Key Return A M Exec exec $[infostore.terminal]
 Silent Key space A M Exec exec $[infostore.runcmd] 
-Silent Key F2 A M ResizeMoveMaximize 45 100 0 0 frame
-Silent Key F3 A M ResizeMoveMaximize 45 100 50 0 frame
+Silent Key F2 A M ResizeMoveMaximize frame 50wa 100 0 0
+Silent Key F3 A M ResizeMoveMaximize frame 50wa 100 100wa 0
 Silent Key F10 A M Maximize 100 100
 
 # Window Buttons: [1 3 5 7 9  TTTTT  0 8 6 4 2]
