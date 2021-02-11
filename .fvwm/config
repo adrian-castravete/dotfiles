@@ -256,20 +256,20 @@ Style gmrun GrabFocus
 #      13 - FvwmPager Active Page
 #      14 - FvwmIconMan Iconified Button
 ###########
-Colorset 0  fg #ffffff, bg #2b4e5e, hi, sh, Plain, NoShape
-Colorset 1  fg #000000, bg #88b2b1, hi, sh, Plain, NoShape
-Colorset 2  fg #ffffff, bg #2b4e5e, hi, sh, Plain, NoShape
-Colorset 3  fg black, bg #415554, hi, sh, Plain, NoShape
-Colorset 4  fg black, bg #14252c, hi #24424f, sh #111f26, Plain, NoShape
-Colorset 5  fg #000000, bg #cbdcca, hi, sh, Plain, NoShape
-Colorset 6  fg #ffffff, bg #88b2b1, hi, sh, Plain, NoShape
-Colorset 7  fg #000000, bg #ffffff, hi, sh, Plain, NoShape
-Colorset 8  fg #ffffff, bg #2b4e5e, hi, sh, Plain, NoShape
-Colorset 10 fg #ffffff, bg #2b4e5e, hi #aaaaaa, sh #999999, Plain, NoShape
-Colorset 11 fg #ffffff, bg #1a6e99, hi #ffffff, sh #ffffff, Plain, NoShape
-Colorset 12 fg #2d2d2d, bg #ffffff, hi, sh, Plain, NoShape
-Colorset 13 fg #ffffff, bg #006c6c, hi, sh, Plain, NoShape
-Colorset 14 fg #a8988f, bg #2b4e5e, hi #aaaaaa, sh #999999, Plain, NoShape
+Colorset 0  fg #ffffff, bg #508cd7, hi, sh, Plain, NoShape
+Colorset 1  fg #e6c86e, bg #646964, hi, sh, Plain, NoShape
+Colorset 2  fg #dcf5ff, bg #508cd7, hi, sh, Plain, NoShape
+Colorset 3  fg #000000, bg #646964, hi, sh, Plain, NoShape
+Colorset 4  fg #000000, bg #508cd7, hi, sh, Plain, NoShape
+Colorset 5  fg #646964, bg #dcf5ff, hi, sh, Plain, NoShape
+Colorset 6  fg #000000, bg #508cd7, hi, sh, Plain, NoShape
+Colorset 7  fg #55415f, bg #646964, hi, sh, Plain, NoShape
+Colorset 8  fg #dcf5ff, bg #508cd7, hi, sh, Plain, NoShape
+Colorset 10 fg #ffffff, bg #508cd7, hi, sh, Plain, NoShape
+Colorset 11 fg #ffffff, bg #64b964, hi, sh, Plain, NoShape
+Colorset 12 fg #e6c86e, bg #646964, hi, sh, Plain, NoShape
+Colorset 13 fg #000000, bg #dcf5ff, hi, sh, Plain, NoShape
+Colorset 14 fg #646964, bg #508cd7, hi, sh, Plain, NoShape
 
 #######
 # 4: Menus
@@ -536,7 +536,7 @@ ButtonStyle 4 Clear MwmDecorMin
 Style * UseDecor MyDecor
 
 # Decor Styles
-Style * BorderWidth 5, HandleWidth 5, FvwmBorder, FirmBorder
+Style * BorderWidth 5, HandleWidth 6, FvwmBorder, FirmBorder
 Style * Colorset 1, HilightColorset 2
 Style * BorderColorset 3, HilightBorderColorset 4
 
