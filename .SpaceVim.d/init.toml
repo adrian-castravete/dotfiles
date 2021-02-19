@@ -11,7 +11,7 @@
     # set spacevim theme. by default colorscheme layer is not loaded,
     # if you want to use more colorscheme, please load the colorscheme
     # layer
-    colorscheme = "gruvbox"
+    colorscheme = "wombat256mod"
     colorscheme_bg = "dark"
     # Disable guicolors in basic mode, many terminal do not support 24bit
     # true colors
@@ -23,12 +23,16 @@
     buffer_index_type = 4
     enable_tabline_filetype_icon = true
     enable_statusline_mode = false
+    bootstrap_after = "myconfig#after"
 
 # Enable autocomplete layer
 [[layers]]
 name = 'autocomplete'
 auto_completion_return_key_behavior = "complete"
 auto_completion_tab_key_behavior = "smart"
+
+[[layers]]
+name = "colorscheme"
 
 [[layers]]
 name = 'shell'
@@ -59,3 +63,14 @@ name = "lang#javascript"
 
 [[layers]]
 name = "lang#javascript"
+
+[[layers]]
+name = "lang#extra"
+
+[[custom_plugins]]
+repo = "junegunn/seoul256.vim"
+merged = false
+
+#[[custom_plugins]]
+#repo = "chriskempson/base16-vim"
+#merged = false
