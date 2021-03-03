@@ -3,5 +3,5 @@
 slock
 if ! pidof xautolock
 then
-  xautolock -time 5 -locker lock -notify 5 &
+  xautolock -time 5 -locker lock -notify 5 -bell 10 &
 fi
