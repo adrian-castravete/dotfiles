@@ -24,6 +24,7 @@
     enable_tabline_filetype_icon = true
     enable_statusline_mode = false
     bootstrap_after = "myconfig#after"
+    lint_on_save = false
 
 # Enable autocomplete layer
 [[layers]]
